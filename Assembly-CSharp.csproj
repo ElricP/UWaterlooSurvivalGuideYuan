@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{17A7C06F-409F-9725-C1C4-3B978948D369}</ProjectGuid>
+    <ProjectGuid>{1DDAAF1E-413A-51E3-9655-348ABA45D369}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
+     <Compile Include="Assets\Scripts\Login.cs" />
+     <Compile Include="Assets\Scripts\Register.cs" />
      <Compile Include="Assets\UI\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\UI\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\UI\Scripts\ChangeColor.cs" />
