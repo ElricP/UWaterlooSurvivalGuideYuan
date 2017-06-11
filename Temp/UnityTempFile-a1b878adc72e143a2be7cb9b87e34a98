@@ -89,6 +89,8 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 'Assets/ClassDefs/Account.cs'
+'Assets/ClassDefs/Character.cs'
+'Assets/ClassDefs/Icon.cs'
 'Assets/Scripts/LoadSceneOnClick.cs'
 'Assets/Scripts/Login.cs'
 'Assets/Scripts/Register.cs'

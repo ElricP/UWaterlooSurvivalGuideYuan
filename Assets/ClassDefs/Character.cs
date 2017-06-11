@@ -6,8 +6,8 @@ using System.IO;
 public class Character : MonoBehaviour {
 
 	public int id;
-	public string name;
-	public Path picture;
+	public string characterName;
+	public string picture;
 	public Icon icon;
 	public string backgroundStory;
 	public int health;
