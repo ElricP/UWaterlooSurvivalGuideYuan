@@ -6,8 +6,8 @@ using System.IO;
 public class Icon : MonoBehaviour {
 
 	public int id;
-	public string name;
-	public Path pictuer;
+	public string iconName;
+	public string picturePath;
 
 	// Use this for initialization
 	void Start () {
