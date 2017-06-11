@@ -17,7 +17,7 @@
 -define:UNITY_5_4_OR_NEWER
 -define:UNITY_5_5_OR_NEWER
 -define:UNITY_5_6_OR_NEWER
--define:UNITY_5_6_1
+-define:UNITY_5_6_0
 -define:UNITY_5_6
 -define:UNITY_5
 -define:UNITY_64
@@ -92,6 +92,7 @@
 'Assets/Scripts/LoadSceneOnClick.cs'
 'Assets/Scripts/Login.cs'
 'Assets/Scripts/Register.cs'
+'Assets/Scripts/SettingPanel.cs'
 'Assets/UI/Scripts/ActiveStateToggler.cs'
 'Assets/UI/Scripts/ApplicationManager.cs'
 'Assets/UI/Scripts/ChangeColor.cs'
