@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\ClassDefs\Account.cs" />
      <Compile Include="Assets\ClassDefs\Character.cs" />
+     <Compile Include="Assets\ClassDefs\Combat class\Object.cs" />
      <Compile Include="Assets\ClassDefs\Icon.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\Login.cs" />
