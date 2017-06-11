@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
+using UnityEditor.SceneManagement;
 
 public class Register : MonoBehaviour {
 	public GameObject username;
@@ -19,6 +20,14 @@ public class Register : MonoBehaviour {
 	void Start () {
 		
 	}
+
+	public void RegisterButton (){
+		print ("Registration Successful");
+		Application.LoadLevel ("MainMenu");
+
+	}
+		
+
 	
 	// Update is called once per frame
 	void Update () {
