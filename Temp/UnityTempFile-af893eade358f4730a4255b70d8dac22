@@ -13,13 +13,11 @@
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
--r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
--r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
 -define:UNITY_5_3_OR_NEWER
 -define:UNITY_5_4_OR_NEWER
 -define:UNITY_5_5_OR_NEWER
 -define:UNITY_5_6_OR_NEWER
--define:UNITY_5_6_1
+-define:UNITY_5_6_0
 -define:UNITY_5_6
 -define:UNITY_5
 -define:UNITY_64
@@ -88,8 +86,9 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
-'Assets/Login.cs'
 'Assets/Scripts/LoadSceneOnClick.cs'
+'Assets/Scripts/Login.cs'
+'Assets/Scripts/Register.cs'
 'Assets/UI/Scripts/ActiveStateToggler.cs'
 'Assets/UI/Scripts/ApplicationManager.cs'
 'Assets/UI/Scripts/ChangeColor.cs'
