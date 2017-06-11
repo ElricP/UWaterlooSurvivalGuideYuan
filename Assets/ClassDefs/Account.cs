@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Account : MonoBehaviour {
 
@@ -15,9 +16,13 @@ public class Account : MonoBehaviour {
 	public int gold;
 	public int diamond;
 
+	public Text goldText;
+	public Text diamondText;
+
 	// Use this for initialization
 	void Start () {
-
+		SetGoldText (0);
+		SetDiamondText (0);
 	}
 
 	// Update is called once per frame
@@ -59,5 +64,13 @@ public class Account : MonoBehaviour {
 
 	void UnlockIcon(int iconId) {
 		// TODO
+	}
+
+	void SetGoldText(int newGold) {
+		goldText.text = newGold.ToString();
+	}
+
+	void SetDiamondText(int newDiamond) {
+		diamondText.text = newDiamond.ToString();
 	}
 }
