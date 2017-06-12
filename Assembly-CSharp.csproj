@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -49,7 +49,8 @@
      <Compile Include="Assets\ClassDefs\Account.cs" />
      <Compile Include="Assets\ClassDefs\Character.cs" />
      <Compile Include="Assets\ClassDefs\Combat class\CombatObject.cs" />
-     <Compile Include="Assets\ClassDefs\Icon.cs" />
+x     <Compile Include="Assets\ClassDefs\Icon.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelector.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\Login.cs" />
      <Compile Include="Assets\Scripts\Register.cs" />
