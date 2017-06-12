@@ -1,8 +1,5 @@
 *.DS_Store
 Temp/*
-*.userprefs
-Library/assetDatabase3
-Library/metadata/00/*
 
 /[Ll]ibrary/
 /[Tt]emp/
