@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Account : MonoBehaviour {
 
+	public static Account account;
 	public int id;
 	public string name;
 	public Character currentCharacter;
@@ -18,6 +19,16 @@ public class Account : MonoBehaviour {
 
 	public Text goldText;
 	public Text diamondText;
+
+	// Ensure only one account exists and persist over scenes
+	void Awake() {
+		if (account == null) {
+			DontDestroyOnLoad (gameObject);
+			account = this;
+		} else if (account != this) {
+			Destroy (gameObject);
+		}	
+	}
 
 	// Use this for initialization
 	void Start () {
