@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -48,20 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\ClassDefs\Account.cs" />
      <Compile Include="Assets\ClassDefs\Character.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
      <Compile Include="Assets\ClassDefs\Combat class\Object.cs" />
      <Compile Include="Assets\ClassDefs\Icon.cs" />
-=======
-     <Compile Include="Assets\ClassDefs\Combat class\CombatObject.cs" />
-x     <Compile Include="Assets\ClassDefs\Icon.cs" />
      <Compile Include="Assets\Scripts\CharacterSelector.cs" />
->>>>>>> 45e17647dc6a1af3d4f0c5d4f3af7df846cbc0a8
-=======
-     <Compile Include="Assets\ClassDefs\Combat class\CombatObject.cs" />
-x     <Compile Include="Assets\ClassDefs\Icon.cs" />
-     <Compile Include="Assets\Scripts\CharacterSelector.cs" />
->>>>>>> 45e17647dc6a1af3d4f0c5d4f3af7df846cbc0a8
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\Login.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
