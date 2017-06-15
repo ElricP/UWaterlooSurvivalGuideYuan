@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Login.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\SettingPanel.cs" />
+     <Compile Include="Assets\Scripts\VectorConvert.cs" />
      <Compile Include="Assets\UI\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\UI\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\UI\Scripts\ChangeColor.cs" />
