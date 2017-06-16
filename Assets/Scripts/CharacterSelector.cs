@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterSelector : MonoBehaviour {
 	public Character currentCharacter;
-	int numChar = 3;
+	int numChar = 6;
 	public Transform charSelectionScroll;
 	public List<Button> characterButtons;
 	public CharacterButtonPool charButtonPool;
