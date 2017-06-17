@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\ClassDefs\Account.cs" />
      <Compile Include="Assets\ClassDefs\Character.cs" />
      <Compile Include="Assets\ClassDefs\Combat class\Object.cs" />
