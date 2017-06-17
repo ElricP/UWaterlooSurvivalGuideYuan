@@ -8,10 +8,10 @@ public class Account : MonoBehaviour {
 	public static Account account;
 	public int id;
 	public string name;
-	public Character currentCharacter;
-	public List<Character> unlockedCharacters;
-	public Icon icon;
-	public List<Icon> unlockedIcons;
+	public int currentCharacter;
+	public List<bool> unlockedCharacters;
+	public int currentIcon;
+	public List<bool> unlockedIcons;
 	public int exp;
 	public int level;
 	public int gold;
