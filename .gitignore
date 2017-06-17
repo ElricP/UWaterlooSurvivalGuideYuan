@@ -31,3 +31,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Scenes/Setting.unity
+Assets/Scenes/Login.unity
+*.unity
+*.meta
+*.meta
+Assets/Prefabs/CharacterButton.prefab
