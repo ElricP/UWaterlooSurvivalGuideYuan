@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1B8CBFCE-434E-33C8-3C73-6578FF9CD63C}</ProjectGuid>
+    <ProjectGuid>{5690F46E-CBE7-8FA5-884E-0C253A993E69}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -115,38 +115,35 @@
  <Reference Include="UnityEditor.iOS.Extensions">
  <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>/Applications/Unity/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Editor">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.App">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Auth">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
  <Reference Include="Google.MiniJson">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Tasks">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver_v1.2.28.0">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.28.0.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.28.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.28.0">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.28.0.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.28.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler_v1.2.28.0">
- <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/PlayServicesResolver/Editor/Google.VersionHandler_v1.2.28.0.dll</HintPath>
+ <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/PlayServicesResolver/Editor/Google.VersionHandler_v1.2.28.0.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -157,11 +154,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{D951A6D4-D315-B8FC-961B-1849D87B9352}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{B253C69A-349A-D1A7-5222-EF343971ADDF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{1DDAAF1E-413A-51E3-9655-348ABA45D369}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{FE3E573C-08CF-514D-E97D-9264AD50EF27}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{1F197874-11FC-6068-13C1-CF0A1F2F6349}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
+      <Project>{AF60FE0D-F8E5-2776-1529-90371ECDCC9E}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
