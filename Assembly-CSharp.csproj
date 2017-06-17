@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FE3E573C-08CF-514D-E97D-9264AD50EF27}</ProjectGuid>
+    <ProjectGuid>{1DDAAF1E-413A-51E3-9655-348ABA45D369}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -108,24 +108,24 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.App">
- <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Auth">
- <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
  <Reference Include="Google.MiniJson">
- <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
- <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
+ <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Tasks">
- <HintPath>/Users/Elric/UW Survival Guide/gitRepository/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
+ <HintPath>/Users/jiayiliu/Desktop/cs 446 Project/UWSurvivalGuide/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{B253C69A-349A-D1A7-5222-EF343971ADDF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{D951A6D4-D315-B8FC-961B-1849D87B9352}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
