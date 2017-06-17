@@ -13,10 +13,13 @@ public class Register : MonoBehaviour {
 	private string Email;
 	private string Password;
 	private string ConfirmPassword;
-	private bool emailValid = false;
+	private bool EmailValid;
+	private string RegisterMessage;
 
 	// Use this for initialization
 	void Start () {
+		EmailValid = false;
+		RegisterMessage = "";
 
 	}
 

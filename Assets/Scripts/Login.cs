@@ -9,6 +9,7 @@ public class Login : MonoBehaviour {
 	public GameObject password;
 	private string Username;
 	private string Password;
+	private string LoginMessage;
 	// Use this for initialization
 	void Start () {
 		
