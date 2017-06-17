@@ -69,3 +69,12 @@
 /Users/Elric/UW Survival Guide/gitRepository/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/Elric/UW Survival Guide/gitRepository/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/Elric/UW Survival Guide/gitRepository/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Firebase.App.dll
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Firebase.Auth.dll
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Google.MiniJson.dll
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Unity.Compat.dll
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Unity.Tasks.dll
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/nouyang/Desktop/UWSurvivalGuide/Temp/bin/Debug/Assembly-CSharp.dll

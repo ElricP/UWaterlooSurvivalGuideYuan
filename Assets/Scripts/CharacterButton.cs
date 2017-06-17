@@ -5,22 +5,25 @@ using UnityEngine.UI;
 
 public class CharacterButton : MonoBehaviour {
 
-	Button button;
+	public Button buttonComponent;
 	public Text nameLabel;
-	//public Sprite iconImage;
-	public Transform transform;
+	public Transform scrollList;
 
 	// Use this for initialization
 	void Start () {
-
+		buttonComponent.onClick.AddListener (OnClick);
 	}
 
 	// Update is called once per frame
-	public void Setup () {
-		nameLabel.text = "test";
-		//transform.position = new Vector3(0, 0, 0);
-		//RectTransform.height= 28;
-		//button.RectTransform.posX= 0;
-		//button.RectTransform.posY= 0;
+	public void Setup (Sprite sprite, string name, bool unlocked) {
+		nameLabel.text = name;
+		buttonComponent.image.overrideSprite = sprite;
+
+		// TODO: Edit size
+
+	}
+
+	public void OnClick() {
+		nameLabel.text = "clicked";
 	}
 }
