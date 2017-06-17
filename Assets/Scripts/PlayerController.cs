@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour {
 	Transform gun;
 	public GameObject bullet;
 	private float nextFire = 0.0F;
+
+	public GameObject Boost;
+	public float boostMultiplier;
+	public float boostDuration;
+
 	// Use this for initialization
 	void Start () {
 		body = this.GetComponent<Rigidbody2D> ();
@@ -18,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		Vector2 moveVec = new Vector2 (CrossPlatformInputManager.GetAxis("Horizontal"),CrossPlatformInputManager.GetAxis("Vertical")) * speed;
 		Vector3 shootVec = new Vector3 (CrossPlatformInputManager.GetAxis ("Horizontal2"), CrossPlatformInputManager.GetAxis ("Vertical2"),90);//arbitrary large constant to negate rotation on z axis
 		body.MovePosition (transform.position.toVector2() + moveVec);
@@ -38,4 +43,17 @@ public class PlayerController : MonoBehaviour {
 		Instantiate (bullet, gun.position,Quaternion.identity);
 	}
 
+	void OnCollisionEnter2D(Collision2D item) {
+		//Debug.Log("Collision Detected");
+		if (item.gameObject.tag == "Boost") {
+			Destroy (item.gameObject);
+			StartCoroutine ("ApplyBoost");
+		}
+	}
+
+	IEnumerator ApplyBoost() {
+		attackSpeed = attackSpeed * boostMultiplier;
+		yield return new WaitForSecondsRealtime (boostDuration);
+		attackSpeed = attackSpeed / boostMultiplier;
+	}
 }
