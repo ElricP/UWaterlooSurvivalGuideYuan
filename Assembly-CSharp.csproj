@@ -50,12 +50,16 @@
      <Compile Include="Assets\ClassDefs\Character.cs" />
      <Compile Include="Assets\ClassDefs\Combat class\Object.cs" />
      <Compile Include="Assets\ClassDefs\Icon.cs" />
+     <Compile Include="Assets\DestroyWithDelay.cs" />
+     <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\CharacterButton.cs" />
      <Compile Include="Assets\Scripts\CharacterButtonPool.cs" />
      <Compile Include="Assets\Scripts\CharacterSelector.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\Login.cs" />
+     <Compile Include="Assets\Scripts\PlayerController 2.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Register.cs" />
      <Compile Include="Assets\Scripts\SettingPanel.cs" />
      <Compile Include="Assets\Scripts\VectorConvert.cs" />
      <Compile Include="Assets\UI\Scripts\ActiveStateToggler.cs" />
