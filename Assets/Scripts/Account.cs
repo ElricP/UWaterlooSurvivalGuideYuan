@@ -39,17 +39,18 @@ public class Account : MonoBehaviour {
 	}
 
 	// initialize account info
-	public void Setup(int E, int L, int G, int D, int I, string UN, int CURC, int CURI, List<bool> UNC, List<bool> UNI) {
-		Account.account.SetExp (E);
-		Account.account.SetLevel (L);
-		Account.account.SetGold (G);
-		Account.account.SetDiamond (D);
-		Account.account.SetId (I);
-		Account.account.SetUsername (UN);
-		Account.account.SetCurrentCharacter (CURC);
-		Account.account.SetCurrentIcon (CURI);
-		Account.account.SetUnlockedCharacters (UNC);
-		Account.account.SetUnlockedIcons (UNI);
+	public void Setup(int initExp, int initLevel, int initGold, int initDiamond, int initId, string initUsername, int initCurrentCharacter, 
+		              int initCurrentIcon, List<bool> initUnlockedCharacters, List<bool> initUnlockedIcons ) {
+		exp = initExp;
+		level = initLevel;
+		gold = initGold;
+		diamond = initDiamond;
+		id = initId;
+		username = initUsername;
+		currentCharacter = initCurrentCharacter;
+		currentIcon = initCurrentIcon;
+		unlockedCharacters = initUnlockedCharacters;
+		unlockedIcons = initUnlockedIcons;
 	}
 
 	// ID
