@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
-	public int speed = 10000;
+	public int speed;
 	public float attackSpeed;
 	Rigidbody2D body;
 	Transform gun;
@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour {
 	public GameObject Boost;
 	public float boostMultiplier;
 	public float boostDuration;
+
+	public GameObject HealthKit;
+	public GameObject Armor;
+	public GameObject SwiftyShoes;
+	public int speedMultiplier;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +53,19 @@ public class PlayerController : MonoBehaviour {
 		if (item.gameObject.tag == "Boost") {
 			Destroy (item.gameObject);
 			StartCoroutine ("ApplyBoost");
+		} else if (item.gameObject.tag == "HealthKit") {
+			Destroy (item.gameObject);
+
+			// TODO: increase player's health
+
+		} else if (item.gameObject.tag == "Armor") {
+			Destroy (item.gameObject);
+
+			// TODO: damage down
+
+		} else if (item.gameObject.tag == "SwiftyShoes") {
+			Destroy (item.gameObject);
+			speed = speed * speedMultiplier;
 		}
 	}
 
