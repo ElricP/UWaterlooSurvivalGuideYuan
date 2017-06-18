@@ -8,12 +8,12 @@ public class MainMenu : MonoBehaviour {
 	//public Account curAccount;
 	public Text goldText;
 	public Text diamondText;
+	public Image charImage;
+	public Image profileImage;
 
 	// Use this for initialization
 	void Start () {
-		Account.account.SetGold (199999);
-		setGoldText (Account.account.GetGold());
-		setDiamondText (Account.account.GetDiamond());
+		SetAllTexts ();
 	}
 	
 	// Update is called once per frame
@@ -21,11 +21,16 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 
-	void setGoldText(int num) {
+	public void SetAllTexts() {
+		setGoldText (Account.account.GetGold());
+		setDiamondText (Account.account.GetDiamond());
+	}
+
+	private void setGoldText(int num) {
 		goldText.text = num.ToString();
 	}
 
-	void setDiamondText(int num) {
+	private void setDiamondText(int num) {
 		diamondText.text = num.ToString();
 	}
 }

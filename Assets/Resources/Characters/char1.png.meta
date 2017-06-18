@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: d1d22458a63d042b899c257eed227f69
-timeCreated: 1497598279
+timeCreated: 1497819498
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: char1_main
     21300002: char1_0
+    21300004: char1_icon
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -94,6 +95,19 @@ TextureImporter:
         height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: char1_icon
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 191
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
