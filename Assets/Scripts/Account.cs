@@ -17,8 +17,6 @@ public class Account : MonoBehaviour {
 	public int gold;
 	public int diamond;
 
-	public Text goldText;
-	public Text diamondText;
 
 	// Ensure only one account exists and persist over scenes
 	void Awake() {
@@ -32,8 +30,7 @@ public class Account : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SetGoldText (0);
-		SetDiamondText (0);
+
 	}
 
 	// Update is called once per frame
@@ -57,15 +54,15 @@ public class Account : MonoBehaviour {
 		// TODO
 	}
 
-	void SetExp(int newExp) {
+	public void SetExp(int newExp) {
 		exp = newExp;
 	}
 
-	void SetGold(int newGold) {
+	public void SetGold(int newGold) {
 		gold = newGold;
 	}
 
-	void SetDiamond(int newDiamond) {
+	public void SetDiamond(int newDiamond) {
 		diamond = newDiamond;
 	}
 
@@ -76,12 +73,5 @@ public class Account : MonoBehaviour {
 	void UnlockIcon(int iconId) {
 		// TODO
 	}
-
-	void SetGoldText(int newGold) {
-		goldText.text = newGold.ToString();
-	}
-
-	void SetDiamondText(int newDiamond) {
-		diamondText.text = newDiamond.ToString();
-	}
+		
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Text.RegularExpressions;
 
 public class Register : MonoBehaviour {
+	public GameObject account;
 	public GameObject username;
 	public GameObject email;	
 	public GameObject password;
@@ -24,6 +25,10 @@ public class Register : MonoBehaviour {
 	}
 
 	public void RegisterButton (){
+		account.GetComponent<Account> ().SetExp (10);
+		account.GetComponent<Account> ().SetGold (1000);
+		account.GetComponent<Account> ().SetDiamond (500);
+		print ("gold" + account.GetComponent<Account> ().gold);
 		print ("Registration Successful");
 		Application.LoadLevel ("MainMenu");
 
