@@ -9,6 +9,7 @@ public class Login : MonoBehaviour {
 	public GameObject password;
 	private string Username;
 	private string Password;
+	private string LoginMessage;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,11 +22,6 @@ public class Login : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Tab)) {
-			if (username.GetComponent<InputField> ().isFocused) {
-				password.GetComponent<InputField> ().Select ();
-			}
-		}
 		Username = username.GetComponent<InputField> ().text;
 		Password = password.GetComponent<InputField> ().text;
 

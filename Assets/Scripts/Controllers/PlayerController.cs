@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -12,9 +12,18 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bullet;
 	public bool abilityReady = true;
 	private float nextFire = 0.0F;
-	private Vector2 facingDirection;
-	private int speedMultiplier = 10000;
-	private float abilityDuration = 10F;
+
+	public GameObject Boost;
+	public float boostMultiplier;
+	public float boostDuration;
+
+	public GameObject HealthKit;
+	public GameObject Armor;
+	public GameObject SwiftyShoes;
+	public int speedMultiplier;
+private Vector2 facingDirection;
+private int speedMultiplier = 10000;
+private float abilityDuration = 10F;
 	// Use this for initialization
 	void Start () {
 		body = this.GetComponent<Rigidbody2D> ();
@@ -23,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		Vector2 moveVec = new Vector2 (CrossPlatformInputManager.GetAxis("Horizontal"),CrossPlatformInputManager.GetAxis("Vertical")) * speed;
 		Vector3 shootVec = new Vector3 (CrossPlatformInputManager.GetAxis ("Horizontal2"), CrossPlatformInputManager.GetAxis ("Vertical2"),90);//arbitrary large constant to negate rotation on z axis
 		body.MovePosition (transform.position.toVector2() + moveVec); //moving command
@@ -63,5 +72,31 @@ public class PlayerController : MonoBehaviour {
 
 	public bool AbilityReady(){
 		return abilityReady;
+	}
+	void OnCollisionEnter2D(Collision2D item) {
+		//Debug.Log("Collision Detected");
+		if (item.gameObject.tag == "Boost") {
+			Destroy (item.gameObject);
+			StartCoroutine ("ApplyBoost");
+		} else if (item.gameObject.tag == "HealthKit") {
+			Destroy (item.gameObject);
+
+			// TODO: increase player's health
+
+		} else if (item.gameObject.tag == "Armor") {
+			Destroy (item.gameObject);
+
+			// TODO: damage down
+
+		} else if (item.gameObject.tag == "SwiftyShoes") {
+			Destroy (item.gameObject);
+			speed = speed * speedMultiplier;
+		}
+	}
+
+	IEnumerator ApplyBoost() {
+		attackSpeed = attackSpeed * boostMultiplier;
+		yield return new WaitForSecondsRealtime (boostDuration);
+		attackSpeed = attackSpeed / boostMultiplier;
 	}
 }
