@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject SwiftyShoes;
 	public int speedMultiplier;
 private Vector2 facingDirection;
-private int speedMultiplier = 10000;
+
 private float abilityDuration = 10F;
 	// Use this for initialization
 	void Start () {
