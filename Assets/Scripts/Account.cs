@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class Account : MonoBehaviour {
 
 	public static Account account;
-	public int id;
-	public string name;
-	public int currentCharacter;
-	public List<bool> unlockedCharacters;
-	public int currentIcon;
-	public List<bool> unlockedIcons;
-	public int exp;
-	public int level;
-	public int gold;
-	public int diamond;
+	private int id;
+	private string username;
+	private int currentCharacter;
+	private List<bool> unlockedCharacters;
+	private int currentIcon;
+	private List<bool> unlockedIcons;
+	private int exp;
+	private int level;
+	private int gold;
+	private int diamond;
 
 
 	// Ensure only one account exists and persist over scenes
@@ -38,26 +38,74 @@ public class Account : MonoBehaviour {
 
 	}
 
-	void Rename(string newName) {
-		name = newName;
+	// ID
+	public void SetId(int idToBeAss) {
+		id = idToBeAss;
+	}
+		
+	// Name
+	public string GetUsername () {
+		return username;
+	}
+	public void SetUsername(string newName) {
+		username = newName;
 	}
 
-	void SelectChar(int charId) {
-		// TODO
+	// Character
+	public int GetCurrentCharacter () {
+		return currentCharacter;
+	}
+	public void SetCurrentCharacter(int charId) {
+		currentCharacter = charId;
+	}
+	public void SetUnlockedCharacters (List<bool> CharacterUnlockArray) {
+		unlockedCharacters = CharacterUnlockArray;
+	}
+	public List<bool> GetUnlockedCharacters () {
+		return unlockedCharacters;
+	}
+	public void UnlockCharacter(int CharId) {
+		unlockedCharacters [CharId] = true;
 	}
 
-	void SelectIcon(int iconId) {
-		// TODO
+
+	// Icon
+	public int GetCurrentIcon() {
+		return currentIcon;
+	}
+	public void SetCurrentIcon(int iconId) {
+		currentIcon = iconId;
+	}
+	public void SetUnlockedIcons(List<bool> IconUnlockArray) {
+		unlockedIcons = IconUnlockArray;
+	}
+	public List<bool> GetUnlockedIcons () {
+		return unlockedIcons;
+	}
+	public void UnlockIcon(int iconId) {
+		unlockedIcons [iconId] = true;
 	}
 
-	void Levelup() {
-		// TODO
-	}
+	//exp and level
 
 	public void SetExp(int newExp) {
 		exp = newExp;
 	}
+	public int GetExp() {
+		return exp;
+	}
+	public void SetLevel(int newLevel) {
+		level = newLevel;
+	}
+	public int GetLevel() {
+		return level;
+	}
+	public void ExpIncrease(int GainedExp) {
+		level += (exp + GainedExp) / 200;
+		exp = (exp + GainedExp) % 200;
+	}
 
+	// Gold
 	public int GetGold() {
 		return gold;
 	}
@@ -65,7 +113,11 @@ public class Account : MonoBehaviour {
 	public void SetGold(int newGold) {
 		gold = newGold;
 	}
+	public void GoldChange(int changeGold) {
+		gold += changeGold;
+	}
 
+	// Diamond
 	public void SetDiamond(int newDiamond) {
 		diamond = newDiamond;
 	}
@@ -73,12 +125,7 @@ public class Account : MonoBehaviour {
 	public int GetDiamond() {
 		return diamond;
 	}
-	void UnlockChar(int charId) {
-		// TODO
-	}
-
-	void UnlockIcon(int iconId) {
-		// TODO
-	}
-		
+	public void DiamondChange(int changeDiamond) {
+		diamond += changeDiamond;
+	}		
 }
