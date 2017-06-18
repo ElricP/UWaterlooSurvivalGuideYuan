@@ -15,8 +15,9 @@ public class CharacterButton : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	public void Setup (Sprite sprite, string name, bool unlocked) {
-		nameLabel.text = name;
+	public void Setup (int charId) {
+		Sprite sprite  = Resources.Load<Sprite>("char1_main"); 
+		nameLabel.text = "TestChar_"+charId.ToString();
 		buttonComponent.image.overrideSprite = sprite;
 
 		// TODO: Edit size

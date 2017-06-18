@@ -58,6 +58,10 @@ public class Account : MonoBehaviour {
 		exp = newExp;
 	}
 
+	public int GetGold() {
+		return gold;
+	}
+
 	public void SetGold(int newGold) {
 		gold = newGold;
 	}
@@ -66,6 +70,9 @@ public class Account : MonoBehaviour {
 		diamond = newDiamond;
 	}
 
+	public int GetDiamond() {
+		return diamond;
+	}
 	void UnlockChar(int charId) {
 		// TODO
 	}

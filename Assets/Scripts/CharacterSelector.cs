@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterSelector : MonoBehaviour {
-	public Character currentCharacter;
+	public int currentCharacter;
 	int numChar = 7;
 	public Transform charSelectionScroll;
 	// public List<Button> characterButtons;
@@ -21,14 +21,13 @@ public class CharacterSelector : MonoBehaviour {
 	void AddButtons() {
 		int i;
 		for (i = 0; i < numChar; ++i) {
-			Sprite sprite  = Resources.Load<Sprite>("char1_main"); 
-
 			// Use pool to get gameobject(do not always destroy)
 			GameObject newButton = charButtonPool.GetObject();
 			newButton.transform.SetParent(charSelectionScroll);
 
+			// Setup button with character id
 			CharacterButton sampleButton = newButton.GetComponent<CharacterButton>();
-			sampleButton.Setup(sprite, "TestChar_"+i.ToString(), true);
+			sampleButton.Setup(i);
 		}
 	}
 }
