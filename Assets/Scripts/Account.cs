@@ -38,6 +38,20 @@ public class Account : MonoBehaviour {
 
 	}
 
+	// initialize account info
+	public void Setup(int E, int L, int G, int D, int I, string UN, int CURC, int CURI, List<bool> UNC, List<bool> UNI) {
+		Account.account.SetExp (E);
+		Account.account.SetLevel (L);
+		Account.account.SetGold (G);
+		Account.account.SetDiamond (D);
+		Account.account.SetId (I);
+		Account.account.SetUsername (UN);
+		Account.account.SetCurrentCharacter (CURC);
+		Account.account.SetCurrentIcon (CURI);
+		Account.account.SetUnlockedCharacters (UNC);
+		Account.account.SetUnlockedIcons (UNI);
+	}
+
 	// ID
 	public void SetId(int idToBeAss) {
 		id = idToBeAss;
@@ -128,4 +142,5 @@ public class Account : MonoBehaviour {
 	public void DiamondChange(int changeDiamond) {
 		diamond += changeDiamond;
 	}		
+
 }

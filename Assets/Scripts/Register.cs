@@ -23,18 +23,12 @@ public class Register : MonoBehaviour {
 
 	}
 
+
+
 	public void RegisterButton (){
-		Account.account.SetExp (10);
-		Account.account.SetLevel (1);
-		Account.account.SetGold (1000);
-		Account.account.SetDiamond (10000);
-		Account.account.SetId (0);
-		Account.account.SetUsername (Username);
-		Account.account.SetCurrentCharacter (0);
-		Account.account.SetCurrentIcon (0);
-		List<bool> Unlocked = new List<bool> (new bool[] {true,false,false,false,false,false,false,false,false});
-		Account.account.SetUnlockedCharacters(Unlocked);
-		Account.account.SetUnlockedIcons(Unlocked);
+		List<bool> UnlockedC = new List<bool> (new bool[] {true,false,false,false,false,false,false,false,false});
+		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,false,false,false,false,false,false,false});
+		Account.account.Setup (0, 1, 500, 100, 0, Username, 0, 0, UnlockedC, UnlockedI);
 		print ("gold: " + Account.account.GetGold().ToString());
 		print ("Registration Successful");
 		Application.LoadLevel ("MainMenu");
