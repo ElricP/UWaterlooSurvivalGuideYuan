@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject SwiftyShoes;
 private Vector2 facingDirection;
 
-private float abilityDuration = 0.3F;
+private float abilityDuration = 0.5F;
 	// Use this for initialization
 	void Start () {
 		body = this.GetComponent<Rigidbody2D> ();
