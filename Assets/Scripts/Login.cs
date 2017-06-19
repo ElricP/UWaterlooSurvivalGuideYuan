@@ -10,10 +10,12 @@ public class Login : MonoBehaviour {
 	private string Username;
 	private string Password;
 	private string LoginMessage;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
+		
 
 	public void LoginButton() {
 		List<bool> UnlockedC = new List<bool> (new bool[] {true,true,true,false,false,false,false,false,false});
@@ -25,6 +27,7 @@ public class Login : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 		Username = username.GetComponent<InputField> ().text;
 		Password = password.GetComponent<InputField> ().text;
 
