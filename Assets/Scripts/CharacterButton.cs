@@ -10,6 +10,8 @@ public class CharacterButton : MonoBehaviour {
 	public Image lockImage;
 	public Transform scrollList;
 
+	private int charInd;
+
 	// Use this for initialization
 	void Start () {
 		buttonComponent.onClick.AddListener (OnClick);
@@ -25,11 +27,13 @@ public class CharacterButton : MonoBehaviour {
 		if (unlocked) {
 			lockImage.enabled = false;
 		}
+
+		charInd = charId;
 		// TODO: Edit size
 
 	}
 
 	public void OnClick() {
-		nameLabel.text = "clicked";
+		Account.account.SetCurrentCharacter (charInd);
 	}
 }
