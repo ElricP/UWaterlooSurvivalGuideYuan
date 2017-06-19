@@ -9,6 +9,7 @@ public class ProfilePanel : MonoBehaviour {
 	public Text expText;
 	public Text levelText;
 	public Text inputText;
+	private TouchScreenKeyboard keyboard;
 
 	// Use this for initialization
 	void Start () {
