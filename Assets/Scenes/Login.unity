@@ -939,7 +939,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 16
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 16
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -2158,11 +2158,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1617536634}
---- !u!1 &1689132750 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1442300482537562, guid: 4d7b2927fd05941ad808f8d8025373a9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1042920488}
 --- !u!1 &1736642549
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c7619edd79d4cd8979a568148518d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  account: {fileID: 1689132750}
   username: {fileID: 661698721}
   email: {fileID: 1336087553}
   password: {fileID: 1293267004}
