@@ -26,7 +26,9 @@ public class Register : MonoBehaviour {
 
 
 	public void RegisterButton (){
-		
+		if (Password != ConfirmPassword) {
+			return;
+		}
 		List<bool> UnlockedC = new List<bool> (new bool[] {true,false,false,false,false,false,false,false,false});
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,false,false,false,false,false,false,false});
 		Account.account.Setup (0, 1, 500, 100, 0, Username, 0, 0, UnlockedC, UnlockedI);
