@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bullet;
 	public bool abilityReady = true;
 	private float nextFire = 0.0F;
+	public int speedMultiplier;
+	public int shadowStepBoost;
 
 	public GameObject Boost;
 	public float boostMultiplier;
@@ -20,10 +22,9 @@ public class PlayerController : MonoBehaviour {
 	public GameObject HealthKit;
 	public GameObject Armor;
 	public GameObject SwiftyShoes;
-	public int speedMultiplier;
 private Vector2 facingDirection;
 
-private float abilityDuration = 10F;
+private float abilityDuration = 0.3F;
 	// Use this for initialization
 	void Start () {
 		body = this.GetComponent<Rigidbody2D> ();
@@ -61,9 +62,9 @@ private float abilityDuration = 10F;
 	IEnumerator UseAbility(){ //prototype gets shadowstep ability
 		abilityReady = false;
 		GameObject.Find ("AbilityButton").SetActive (false);
-		speed = speed * speedMultiplier;
+		speed = speed * shadowStepBoost;
 		yield return new WaitForSecondsRealtime(abilityDuration);
-		speed = speed/speedMultiplier;
+		speed = speed/shadowStepBoost;
 
 		yield return new WaitForSecondsRealtime (abilityCooldown);
 		abilityReady = true;
