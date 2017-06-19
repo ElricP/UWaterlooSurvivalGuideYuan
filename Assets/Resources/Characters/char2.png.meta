@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 74e7cb874b3fb4bbdaabee891c2eee0f
-timeCreated: 1497843701
+guid: ceac7db29d4024abfafc69a63f415417
+timeCreated: 1497839998
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: char1_main
-    21300002: char1_0
-    21300004: char1_selection
-    21300006: char1_icon
+    21300000: char2_main
+    21300002: char2_selection
+    21300004: char2_icon
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -82,55 +81,42 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char1_main
+      name: char2_main
       rect:
         serializedVersion: 2
-        x: 4
-        y: 244
-        width: 146
-        height: 145
+        x: 6
+        y: 243
+        width: 142
+        height: 143
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: char1_0
+      name: char2_selection
       rect:
         serializedVersion: 2
         x: 153
-        y: 324
-        width: 58
-        height: 62
+        y: 321
+        width: 51
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: char1_selection
+      name: char2_icon
       rect:
         serializedVersion: 2
-        x: 156
-        y: 323
-        width: 47
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: char1_icon
-      rect:
-        serializedVersion: 2
-        x: 4
+        x: 7
         y: 194
-        width: 44
-        height: 49
+        width: 40
+        height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 1, z: 3, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []

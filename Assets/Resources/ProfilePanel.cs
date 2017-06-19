@@ -9,7 +9,7 @@ public class ProfilePanel : MonoBehaviour {
 	public Text expText;
 	public Text levelText;
 	public Text inputText;
-	private TouchScreenKeyboard keyboard;
+	// public Image iconImage;
 
 	// Use this for initialization
 	void Start () {
@@ -38,4 +38,5 @@ public class ProfilePanel : MonoBehaviour {
 		Account.account.SetUsername (inputText.text);
 		SetUsernameText (inputText.text);
 	}
+		
 }
