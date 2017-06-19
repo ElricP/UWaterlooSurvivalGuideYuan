@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 74e7cb874b3fb4bbdaabee891c2eee0f
-timeCreated: 1497843701
+guid: d1d22458a63d042b899c257eed227f69
+timeCreated: 1497843618
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: char1_main
-    21300002: char1_0
-    21300004: char1_selection
-    21300006: char1_icon
+    21300000: char0_main
+    21300002: char0_selection
+    21300004: char0_icon
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -39,8 +38,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 10
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -82,25 +81,25 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char1_main
+      name: char0_main
       rect:
         serializedVersion: 2
-        x: 4
-        y: 244
-        width: 146
-        height: 145
+        x: 0
+        y: 240
+        width: 145
+        height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: char1_0
+      name: char0_selection
       rect:
         serializedVersion: 2
-        x: 153
-        y: 324
-        width: 58
+        x: 149
+        y: 319
+        width: 54
         height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -108,29 +107,16 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: char1_selection
+      name: char0_icon
       rect:
         serializedVersion: 2
-        x: 156
-        y: 323
-        width: 47
-        height: 65
+        x: 2
+        y: 191
+        width: 45
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: char1_icon
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 194
-        width: 44
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 1, z: 3, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []

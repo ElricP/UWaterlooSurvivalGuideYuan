@@ -29,7 +29,7 @@ public class Register : MonoBehaviour {
 		if (Password != ConfirmPassword) {
 			return;
 		}
-		List<bool> UnlockedC = new List<bool> (new bool[] {true,true,false,false,false,false,false,false,false});
+		List<bool> UnlockedC = new List<bool> (new bool[] {true,true,true,false,false,false,false,false,false});
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,false,false,false,false,false,false,false});
 		Account.account.Setup (0, 1, 500, 100, 0, Username, 0, 0, UnlockedC, UnlockedI);
 		print ("gold: " + Account.account.GetGold().ToString());

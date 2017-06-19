@@ -17,15 +17,23 @@ public class CharacterSelector : MonoBehaviour {
 	public Image curCharImage;
 
 	private List<bool> unlockedCharacters;
-
+	private Dictionary<string, Sprite> charSpriteDic;
 	void Awake() {
-			
+		makeCharSpriteDictionay ();
 	}
 
 	void Start() {
 		unlockedCharacters = Account.account.GetUnlockedCharacters ();
 		AddButtons ();
 		SetCharInfo (Account.account.GetCurrentCharacter ());
+	}
+
+	void makeCharSpriteDictionay() {
+		charSpriteDic = new Dictionary<string, Sprite>();
+		Sprite[] sprites  = Resources.LoadAll<Sprite>("Characters/");
+		foreach (Sprite s in sprites) {
+			charSpriteDic [s.name] = s;
+		}
 	}
 
 	void AddButtons() {
@@ -39,18 +47,21 @@ public class CharacterSelector : MonoBehaviour {
 
 			// Setup button with character id
 			CharacterButton charButton = newButton.GetComponent<CharacterButton>();
-			charButton.Setup(i, unlockedCharacters[i]);
+			string spriteName = "char" + (i > 2 ? 0 : i).ToString() + "_main";
+			Sprite s = charSpriteDic[spriteName];
+			charButton.Setup(i, unlockedCharacters[i], this, s);
 		}
 	}
 
 	public void SetCharInfo(int charId) {
 		charName.text = "UW Student " + charId.ToString ();
-		healthText.text = (charId > 0 ? 35 : 25).ToString();
-		attackText.text = (charId > 0 ? 20 : 40).ToString();
-		speedText.text = (charId > 0 ? 50 : 40).ToString();
+		healthText.text = (charId > 1 ? 35 : 25+charId).ToString();
+		attackText.text = (charId > 1 ? 20 : 40+charId).ToString();
+		speedText.text = (charId > 1 ? 50 : 40+charId).ToString();
 		//abilityText.text = (charId > 0 ? 50 : 40).ToString();
 		//backGroundText.text = (charId > 0 ? 50 : 40).ToString();
-		Sprite sprite  = Resources.Load<Sprite>("char"+charId.ToString()+"_main"); 
-		curCharImage.overrideSprite = sprite;
+
+		string spriteName = "char" + (charId > 2 ? 0 : charId).ToString() + "_selection";
+		curCharImage.overrideSprite = charSpriteDic[spriteName];
 	}
 }
