@@ -9,17 +9,17 @@ EditorBuildSettings:
     path: 
     guid: df79534bd004d4cba9ab1e3e39a6703d
   - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 91fca412d64634b3a85055faf0513f72
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 117f7e5ece536461f9d559b49b341085
+  - enabled: 1
+    path: Assets/Scenes/Combat.unity
+    guid: 82879747f97234b21934854602247604
   - enabled: 0
     path: 
     guid: d7e9c3aa162784129850c1a2bfeb6645
   - enabled: 0
     path: 
     guid: 4e9d4f451739b4b0fb6793b559b348ab
-  - enabled: 1
-    path: Assets/Scenes/Login.unity
-    guid: 91fca412d64634b3a85055faf0513f72
-  - enabled: 1
-    path: Assets/Scenes/Combat.unity
-    guid: 82879747f97234b21934854602247604

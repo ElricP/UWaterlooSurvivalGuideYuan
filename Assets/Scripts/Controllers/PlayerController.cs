@@ -61,14 +61,14 @@ private float abilityDuration = 0.5F;
 
 	IEnumerator UseAbility(){ //prototype gets shadowstep ability
 		abilityReady = false;
-		GameObject.Find ("AbilityButton").SetActive (false);
+		//GameObject.Find ("AbilityButton").SetActive (false);
 		speed = speed * shadowStepBoost;
 		yield return new WaitForSecondsRealtime(abilityDuration);
 		speed = speed/shadowStepBoost;
 
 		yield return new WaitForSecondsRealtime (abilityCooldown);
 		abilityReady = true;
-		GameObject.Find ("AbilityButton").SetActive (true);
+		//GameObject.Find ("AbilityButton").SetActive (true);
 	}
 
 	public bool AbilityReady(){
