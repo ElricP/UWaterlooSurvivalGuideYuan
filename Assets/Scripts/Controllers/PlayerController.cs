@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
+	public float maxHealth { get; private set;}
+	public float currentHealth{ get; private set;}
+	private bool invincible;
 	public int speed;
 	public float attackSpeed;
 	public float abilityCooldown;
@@ -29,8 +33,12 @@ private float abilityDuration = 0.5F;
 	void Start () {
 		body = this.GetComponent<Rigidbody2D> ();
 		gun = transform.Find ("Gun");
-
+		maxHealth = 100f;
+		currentHealth = 100f;
+		invincible = false;
 	}
+
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -53,6 +61,7 @@ private float abilityDuration = 0.5F;
 			StartCoroutine ("UseAbility");
 			nextFire = Time.time;
 		}
+
 	}
 
 	void Fire(){
@@ -61,14 +70,19 @@ private float abilityDuration = 0.5F;
 
 	IEnumerator UseAbility(){ //prototype gets shadowstep ability
 		abilityReady = false;
-		//GameObject.Find ("AbilityButton").SetActive (false);
-		speed = speed * shadowStepBoost;
-		yield return new WaitForSecondsRealtime(abilityDuration);
-		speed = speed/shadowStepBoost;
+		speed = speed * shadowStepBoost;	//apply ability effect
+		int countDown = (int)abilityCooldown;
+		GameObject.Find ("abilityCountDown").GetComponent<Text>().text = countDown.ToString();
+		yield return new WaitForSecondsRealtime (abilityDuration);
+		speed = speed/shadowStepBoost;		//end ability effect
 
-		yield return new WaitForSecondsRealtime (abilityCooldown);
+		while(countDown > 0){ //count ability cooldown only after effect gone
+			GameObject.Find ("abilityCountDown").GetComponent<Text> ().text = countDown.ToString();
+			yield return new WaitForSecondsRealtime (1);	
+			countDown = countDown - 1;
+		}
+		GameObject.Find ("abilityCountDown").GetComponent<Text> ().text = "";
 		abilityReady = true;
-		//GameObject.Find ("AbilityButton").SetActive (true);
 	}
 
 	public bool AbilityReady(){
@@ -92,6 +106,8 @@ private float abilityDuration = 0.5F;
 		} else if (item.gameObject.tag == "SwiftyShoes") {
 			Destroy (item.gameObject);
 			speed = speed * speedMultiplier;
+		} else if (item.gameObject.layer == 9 && !invincible) {
+			currentHealth = currentHealth - 5;
 		}
 	}
 
