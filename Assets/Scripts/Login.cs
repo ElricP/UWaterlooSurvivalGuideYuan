@@ -13,11 +13,24 @@ public class Login : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 		
 
 	public void LoginButton() {
+		Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+
+		auth.SignInWithEmailAndPasswordAsync(Username,Password).ContinueWith (task => {
+			if (task.IsCanceled) {
+				Debug.LogError ("SignInWithEmailAndPasswordAsync canceled");
+			}
+			if (task.IsFaulted) {
+				Debug.LogError ("SignInWithEmailAndPasswordAsync error" + task.Exception);
+			}
+
+			Firebase.Auth.FirebaseUser NewUser = task.Result;
+			Debug.LogFormat ("Firebase user signed in: {0} ({1})", NewUser.DisplayName, NewUser.UserId);
+		});
+
 		List<bool> UnlockedC = new List<bool> (new bool[] {true,true,true,false,false,false,false,false,false});
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,true,true,false,false,false,false,false,false});
 		Account.account.Setup (100, 100, 100000000, 100000000, 0, Username, 1, 1, UnlockedC, UnlockedI);
