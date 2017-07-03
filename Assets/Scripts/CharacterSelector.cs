@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterSelector : MonoBehaviour {
 	public int currentCharacter;
 	public Transform charSelectionScroll;
-	public CharacterButtonPool charButtonPool;
+	public ButtonPool charButtonPool;
 
 	public Text charName;
 	public Text healthText;

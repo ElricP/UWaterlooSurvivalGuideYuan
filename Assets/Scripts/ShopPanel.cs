@@ -7,9 +7,28 @@ public class ShopPanel : MonoBehaviour {
 
 	public Text goldText;
 	public Text diamondText;
+	public Transform commodityScroll;
+	public ButtonPool buttonPool;
 
-	void OnEnable () {
+	private List<bool> unlockedCharacters;
+	private List<CommodityButton> buttons;
+	private Dictionary<string, Sprite> commoditySpriteDic;
+	void Awake() {
+		makeCommoditySpriteDictionay ();
+	}
+
+	private void makeCommoditySpriteDictionay() {
+		commoditySpriteDic = new Dictionary<string, Sprite>();
+		Sprite[] sprites  = Resources.LoadAll<Sprite>("Characters/");
+		foreach (Sprite s in sprites) {
+			commoditySpriteDic [s.name] = s;
+		}
+	}
+
+	void Start () {
+		unlockedCharacters = Account.account.GetUnlockedCharacters ();
 		SetAllTexts ();
+		AddButtons ();
 	}
 	
 	// Update is called once per frame
@@ -30,6 +49,27 @@ public class ShopPanel : MonoBehaviour {
 		diamondText.text = num.ToString();
 	}
 
-	public void Buy() {
+	void AddButtons() {
+
+		int i;
+		int numChar = unlockedCharacters.Count;
+		for (i = 0; i < numChar; ++i) {
+			if (unlockedCharacters [i]) {
+				continue;
+			}
+
+			// Use pool to get gameobject(do not always destroy)
+			GameObject newButton = buttonPool.GetObject();
+			newButton.transform.SetParent(commodityScroll);
+
+			// Setup button with character id
+			CommodityButton commodityButton = newButton.GetComponent<CommodityButton>();
+			string spriteName = "char" + (i > 2 ? 2 : i).ToString() + "_main";
+			Sprite s = commoditySpriteDic[spriteName];
+
+			commodityButton.Setup(this, i, 1000, 1000 , s);
+			//buttons.Add (commodityButton);
+		}
 	}
+
 }
