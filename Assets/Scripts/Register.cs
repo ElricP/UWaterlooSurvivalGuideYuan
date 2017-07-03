@@ -29,6 +29,42 @@ public class Register : MonoBehaviour {
 		if (Password != ConfirmPassword) {
 			return;
 		}
+
+		Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+
+		auth.CreateUserWithEmailAndPasswordAsync (Email, Password).ContinueWith (task => {
+			if (task.IsCanceled) {
+				Debug.LogError ("CreateUserWithEmailAndPasswordAsync canceled");
+				return;
+			}
+			if (task.IsFaulted) {
+				Debug.LogError ("CreateUserWithEmailAndPasswordAsync error" + task.Exception);
+				return;
+			}
+			Firebase.Auth.FirebaseUser NewUser = task.Result;
+			Debug.LogFormat ("Firebase user created: {0} ({1})", NewUser.DisplayName, NewUser.UserId);
+		});
+
+		auth.SignInWithEmailAndPasswordAsync(Email,Password).ContinueWith (task => {
+			if (task.IsCanceled) {
+				Debug.LogError ("SignInWithEmailAndPasswordAsync canceled");
+			}
+			if (task.IsFaulted) {
+				Debug.LogError ("SignInWithEmailAndPasswordAsync error" + task.Exception);
+			}
+
+			Firebase.Auth.FirebaseUser NewUser = task.Result;
+			Debug.LogFormat ("Firebase user signed in: {0} ({1})", NewUser.DisplayName, NewUser.UserId);
+		});
+
+
+		Firebase.Auth.FirebaseUser user = auth.CurrentUser;
+		if (user != null) {
+			print ("ddddd");
+		}
+
+			
+
 		List<bool> UnlockedC = new List<bool> (new bool[] {true,true,true,false,false,false,false,false,false});
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,false,false,false,false,false,false,false});
 		Account.account.Setup (0, 1, 500, 100, 0, Username, 0, 0, UnlockedC, UnlockedI);
