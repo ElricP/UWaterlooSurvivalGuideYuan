@@ -162,6 +162,8 @@ MonoBehaviour:
   diamondPriceText: {fileID: 114101491165979104}
   goldPriceText: {fileID: 114473568512651306}
   iconImage: {fileID: 114729781711598856}
+  confirmDialogue: {fileID: 1226323369616458, guid: 951b69d2605be4a6ca5e64192c808b49,
+    type: 2}
 --- !u!114 &114406866738161424
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,6 +9,7 @@ public class CommodityButton : MonoBehaviour {
 	public Text diamondPriceText;
 	public Text goldPriceText;
 	public Image iconImage;
+	public GameObject confirmDialogue;
 
 	private ShopPanel shop;
 	private int itemId;
@@ -26,11 +27,12 @@ public class CommodityButton : MonoBehaviour {
 		
 	}
 
-	public void Setup (ShopPanel shopPanel, int itemId, int diamondPrice, int goldPrice, Sprite buttonSprite) {
+	public void Setup (ShopPanel shopPanel, GameObject dialogue, int itemId, int diamondPrice, int goldPrice, Sprite buttonSprite) {
 		this.itemId = itemId;
 		shop = shopPanel;
+		confirmDialogue = dialogue;
 		this.goldPrice = goldPrice;
-		this.diamondPrice = this.diamondPrice;
+		this.diamondPrice = diamondPrice;
 		diamondPriceText.text = diamondPrice.ToString();
 		goldPriceText.text = goldPrice.ToString ();
 		iconImage.overrideSprite = buttonSprite;
@@ -41,15 +43,8 @@ public class CommodityButton : MonoBehaviour {
 	}
 
 	public void OnClick() {
-		//Account.account.
-		buy();
-	}
-
-	void buy() {
-		int gold = Account.account.GetGold ();
-		if (gold >= goldPrice) {
-			Account.account.SetGold (gold-goldPrice);
-			shop.SetAllTexts();
-		}
+		ConfirmationDialogue cd = confirmDialogue.GetComponent<ConfirmationDialogue> ();
+		cd.SetUp (goldPrice, diamondPrice, iconImage.sprite);
+		confirmDialogue.SetActive(true);
 	}
 }

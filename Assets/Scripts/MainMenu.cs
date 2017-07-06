@@ -15,7 +15,11 @@ public class MainMenu : MonoBehaviour {
 	void Start () {
 		SetAllTexts ();
 	}
-	
+
+	void OnEnable() {
+		SetAllTexts ();
+	}
+
 	// Update is called once per frame
 	void Update () {
 		

@@ -9,6 +9,7 @@ public class ShopPanel : MonoBehaviour {
 	public Text diamondText;
 	public Transform commodityScroll;
 	public ButtonPool buttonPool;
+	public GameObject confirmationDialogue;
 
 	private List<bool> unlockedCharacters;
 	private List<CommodityButton> buttons;
@@ -33,7 +34,7 @@ public class ShopPanel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		SetAllTexts ();
 	}
 
 	public void SetAllTexts() {
@@ -67,7 +68,7 @@ public class ShopPanel : MonoBehaviour {
 			string spriteName = "char" + (i > 2 ? 2 : i).ToString() + "_main";
 			Sprite s = commoditySpriteDic[spriteName];
 
-			commodityButton.Setup(this, i, 1000, 1000 , s);
+			commodityButton.Setup(this, confirmationDialogue, i, 1000, 1000 , s);
 			//buttons.Add (commodityButton);
 		}
 	}
