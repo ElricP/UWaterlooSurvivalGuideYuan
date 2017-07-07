@@ -27,7 +27,7 @@ public class CommodityButton : MonoBehaviour {
 		
 	}
 
-	public void Setup (ShopPanel shopPanel, GameObject dialogue, int itemId, int diamondPrice, int goldPrice, Sprite buttonSprite) {
+	public void Setup (ShopPanel shopPanel, GameObject dialogue, int itemId, int diamondPrice, int goldPrice, Sprite buttonSprite, bool unlocked) {
 		this.itemId = itemId;
 		shop = shopPanel;
 		confirmDialogue = dialogue;
@@ -36,7 +36,7 @@ public class CommodityButton : MonoBehaviour {
 		diamondPriceText.text = diamondPrice.ToString();
 		goldPriceText.text = goldPrice.ToString ();
 		iconImage.overrideSprite = buttonSprite;
-		buttonComponent.interactable = true;
+		buttonComponent.interactable = !unlocked;
 
 		// TODO: Edit size
 

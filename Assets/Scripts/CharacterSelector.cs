@@ -15,25 +15,17 @@ public class CharacterSelector : MonoBehaviour {
 	public Text abilityText;
 	public Text backGroundText;
 	public Image curCharImage;
+	public SpriteLibrary spriteDictionary;
 
 	private List<bool> unlockedCharacters;
-	private Dictionary<string, Sprite> charSpriteDic;
 	void Awake() {
-		makeCharSpriteDictionay ();
+		
 	}
 
 	void Start() {
 		unlockedCharacters = Account.account.GetUnlockedCharacters ();
 		AddButtons ();
 		SetCharInfo (Account.account.GetCurrentCharacter ());
-	}
-
-	void makeCharSpriteDictionay() {
-		charSpriteDic = new Dictionary<string, Sprite>();
-		Sprite[] sprites  = Resources.LoadAll<Sprite>("Characters/");
-		foreach (Sprite s in sprites) {
-			charSpriteDic [s.name] = s;
-		}
 	}
 
 	void AddButtons() {
@@ -48,7 +40,7 @@ public class CharacterSelector : MonoBehaviour {
 			// Setup button with character id
 			CharacterButton charButton = newButton.GetComponent<CharacterButton>();
 			string spriteName = "char" + (i > 2 ? 0 : i).ToString() + "_main";
-			Sprite s = charSpriteDic[spriteName];
+			Sprite s = spriteDictionary.charSpriteDic[spriteName];
 			charButton.Setup(i, unlockedCharacters[i], this, s);
 		}
 	}
@@ -62,6 +54,6 @@ public class CharacterSelector : MonoBehaviour {
 		//backGroundText.text = (charId > 0 ? 50 : 40).ToString();
 
 		string spriteName = "char" + (charId > 2 ? 0 : charId).ToString() + "_selection";
-		curCharImage.overrideSprite = charSpriteDic[spriteName];
+		curCharImage.overrideSprite = spriteDictionary.charSpriteDic[spriteName];
 	}
 }

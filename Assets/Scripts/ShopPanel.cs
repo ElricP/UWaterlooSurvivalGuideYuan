@@ -10,20 +10,12 @@ public class ShopPanel : MonoBehaviour {
 	public Transform commodityScroll;
 	public ButtonPool buttonPool;
 	public GameObject confirmationDialogue;
+	public SpriteLibrary spriteDictionary;
 
 	private List<bool> unlockedCharacters;
 	private List<CommodityButton> buttons;
-	private Dictionary<string, Sprite> commoditySpriteDic;
-	void Awake() {
-		makeCommoditySpriteDictionay ();
-	}
 
-	private void makeCommoditySpriteDictionay() {
-		commoditySpriteDic = new Dictionary<string, Sprite>();
-		Sprite[] sprites  = Resources.LoadAll<Sprite>("Characters/");
-		foreach (Sprite s in sprites) {
-			commoditySpriteDic [s.name] = s;
-		}
+	void Awake() {
 	}
 
 	void Start () {
@@ -55,9 +47,6 @@ public class ShopPanel : MonoBehaviour {
 		int i;
 		int numChar = unlockedCharacters.Count;
 		for (i = 0; i < numChar; ++i) {
-			if (unlockedCharacters [i]) {
-				continue;
-			}
 
 			// Use pool to get gameobject(do not always destroy)
 			GameObject newButton = buttonPool.GetObject();
@@ -66,9 +55,9 @@ public class ShopPanel : MonoBehaviour {
 			// Setup button with character id
 			CommodityButton commodityButton = newButton.GetComponent<CommodityButton>();
 			string spriteName = "char" + (i > 2 ? 2 : i).ToString() + "_main";
-			Sprite s = commoditySpriteDic[spriteName];
+			Sprite s = spriteDictionary.charSpriteDic[spriteName];
 
-			commodityButton.Setup(this, confirmationDialogue, i, 1000, 1000 , s);
+			commodityButton.Setup(this, confirmationDialogue, i, 1000, 1000 , s, unlockedCharacters [i]);
 			//buttons.Add (commodityButton);
 		}
 	}
