@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
+using System.IO;
 
 public class PlayerController : MonoBehaviour {
+	public RewardPanel rewardPanel;
+
 	public float maxHealth { get; private set;}
 	public float currentHealth{ get; private set;}
 	private bool invincible;
@@ -30,8 +33,8 @@ public class PlayerController : MonoBehaviour {
 	public float SwiftyShoesDuration;
 
 	private float damage = 5;
+	private bool died = false;
 private Vector2 facingDirection;
-
 private float abilityDuration = 0.5F;
 	// Use this for initialization
 	void Start () {
@@ -46,28 +49,38 @@ private float abilityDuration = 0.5F;
 	
 	// Update is called once per frame
 	void Update () {
-		Vector2 moveVec = new Vector2 (CrossPlatformInputManager.GetAxis("Horizontal"),CrossPlatformInputManager.GetAxis("Vertical")) * speed;
-		Vector3 shootVec = new Vector3 (CrossPlatformInputManager.GetAxis ("Horizontal2"), CrossPlatformInputManager.GetAxis ("Vertical2"),90);//arbitrary large constant to negate rotation on z axis
-		body.MovePosition (transform.position.toVector2() + moveVec); //moving command
-		if (shootVec.x != 0 || shootVec.y != 0) { //shooting command
-			transform.rotation = Quaternion.LookRotation (shootVec,Vector3.back); //player's rotation while shooting
-			facingDirection = shootVec.toVector2();
-			if (Time.time > nextFire) {
-				Fire ();
-				nextFire = Time.time + (1 / attackSpeed);
-			}
-		} else if (moveVec.x != 0 || moveVec.y != 0){ //player's rotation while not shooting
-			Vector3 moveLookVec = new Vector3 (moveVec.x/speed, moveVec.y/speed, 9999);
-			transform.rotation = Quaternion.LookRotation(moveLookVec, Vector3.back);
-			facingDirection = moveVec/speed;
+		if (currentHealth <= 0) {
+			Die ();
 		}
-		if(CrossPlatformInputManager.GetButton("AbilityButton") && abilityReady){
-			StartCoroutine ("UseAbility");
-			nextFire = Time.time;
+		if (!died) {
+			Vector2 moveVec = new Vector2 (CrossPlatformInputManager.GetAxis ("Horizontal"), CrossPlatformInputManager.GetAxis ("Vertical")) * speed;
+			Vector3 shootVec = new Vector3 (CrossPlatformInputManager.GetAxis ("Horizontal2"), CrossPlatformInputManager.GetAxis ("Vertical2"), 90);//arbitrary large constant to negate rotation on z axis
+			body.MovePosition (transform.position.toVector2 () + moveVec); //moving command
+			if (shootVec.x != 0 || shootVec.y != 0) { //shooting command
+				transform.rotation = Quaternion.LookRotation (shootVec, Vector3.back); //player's rotation while shooting
+				facingDirection = shootVec.toVector2 ();
+				if (Time.time > nextFire) {
+					Fire ();
+					nextFire = Time.time + (1 / attackSpeed);
+				}
+			} else if (moveVec.x != 0 || moveVec.y != 0) { //player's rotation while not shooting
+				Vector3 moveLookVec = new Vector3 (moveVec.x / speed, moveVec.y / speed, 9999);
+				transform.rotation = Quaternion.LookRotation (moveLookVec, Vector3.back);
+				facingDirection = moveVec / speed;
+			}
+			if (CrossPlatformInputManager.GetButton ("AbilityButton") && abilityReady) {
+				StartCoroutine ("UseAbility");
+				nextFire = Time.time;
+			}
 		}
 
 	}
-
+	void Die(){
+		rewardPanel.gameObject.SetActive (true);
+		rewardPanel.gameObject.GetComponent<RewardPanel> ().Reward ();
+		GameObject.Find ("CombatControlPanel").SetActive (false);
+		died = true;
+	}
 	void Fire(){
 		Instantiate (bullet, gun.position,Quaternion.identity);
 	}
