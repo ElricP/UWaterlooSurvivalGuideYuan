@@ -10,14 +10,21 @@ public class MainMenu : MonoBehaviour {
 	public Text diamondText;
 	public Image charImage;
 	public Image profileImage;
+	public SpriteLibrary spriteDictionary;
 
 	// Use this for initialization
 	void Start () {
 		SetAllTexts ();
+		int i = Account.account.GetCurrentIcon ();
+		string spriteName = "char" + (i > 2 ? 2 : i).ToString() + "_icon";
+		profileImage.overrideSprite = spriteDictionary.charSpriteDic [spriteName];
 	}
 
-	void OnEnable() {
+	void LateUpdate() {
 		SetAllTexts ();
+		int i = Account.account.GetCurrentIcon ();
+		string spriteName = "char" + (i > 2 ? 2 : i).ToString() + "_icon";
+		profileImage.overrideSprite = spriteDictionary.charSpriteDic [spriteName];
 	}
 
 	// Update is called once per frame

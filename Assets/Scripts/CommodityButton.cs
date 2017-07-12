@@ -27,6 +27,11 @@ public class CommodityButton : MonoBehaviour {
 		
 	}
 
+	void LateUpdate() {
+		List<bool> unlockedChars = Account.account.GetUnlockedCharacters ();
+		buttonComponent.interactable = !unlockedChars[itemId];
+	}
+
 	public void Setup (ShopPanel shopPanel, GameObject dialogue, int itemId, int diamondPrice, int goldPrice, Sprite buttonSprite, bool unlocked) {
 		this.itemId = itemId;
 		shop = shopPanel;
@@ -44,7 +49,7 @@ public class CommodityButton : MonoBehaviour {
 
 	public void OnClick() {
 		ConfirmationDialogue cd = confirmDialogue.GetComponent<ConfirmationDialogue> ();
-		cd.SetUp (goldPrice, diamondPrice, iconImage.sprite);
+		cd.SetUp (itemId, goldPrice, diamondPrice, iconImage.sprite);
 		confirmDialogue.SetActive(true);
 	}
 }
