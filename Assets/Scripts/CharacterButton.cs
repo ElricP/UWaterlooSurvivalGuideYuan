@@ -18,10 +18,13 @@ public class CharacterButton : MonoBehaviour {
 		buttonComponent.onClick.AddListener (OnClick);
 	}
 
-	void Update() {
-		// Use this to unable locked char selection
-		// TODO: find a more efficient way
-		OnEnable ();	
+	void LateUpdate() {
+		if (Account.account.GetCurrentCharacter () == charInd) {
+			buttonComponent.Select ();
+		}
+		List<bool> unlockedChars = Account.account.GetUnlockedCharacters ();
+		buttonComponent.interactable = unlockedChars[charInd];
+		lockImage.enabled = !unlockedChars[charInd];
 	}
 
 	// Update is called once per frame
@@ -48,8 +51,6 @@ public class CharacterButton : MonoBehaviour {
 	}
 
 	void OnEnable() {
-		if (Account.account.GetCurrentCharacter () == charInd) {
-			buttonComponent.Select ();
-		}
+		
 	}
 }

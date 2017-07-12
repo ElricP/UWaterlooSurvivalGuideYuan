@@ -12,6 +12,7 @@ public class ConfirmationDialogue : MonoBehaviour {
 	public Text goldPriceText;
 	int goldPrice;
 	int diamondPrice;
+	int itemId;
 
 	void Start() {
 		buyGold.onClick.AddListener (BuyWithGold);
@@ -26,9 +27,10 @@ public class ConfirmationDialogue : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	public void SetUp(int gp, int dp, Sprite s) {
+	public void SetUp(int id, int gp, int dp, Sprite s) {
 		goldPrice = gp;
 		diamondPrice = dp;
+		itemId = id;
 		diamondPriceText.text = diamondPrice.ToString();
 		goldPriceText.text = goldPrice.ToString ();
 		itemImage.overrideSprite = s;
@@ -38,6 +40,7 @@ public class ConfirmationDialogue : MonoBehaviour {
 		int gold = Account.account.GetGold ();
 		if (gold >= goldPrice) {
 			Account.account.SetGold (gold-goldPrice);
+			unlockItem ();
 		}
 	}
 
@@ -45,6 +48,13 @@ public class ConfirmationDialogue : MonoBehaviour {
 		int diamond = Account.account.GetDiamond ();
 		if (diamond >= diamondPrice) {
 			Account.account.SetDiamond (diamond-diamondPrice);
+			unlockItem ();
 		}
+	}
+
+	void unlockItem() {
+		List<bool> unlockedChars = Account.account.GetUnlockedCharacters ();
+		unlockedChars[itemId] = true;
+		Account.account.SetUnlockedCharacters (unlockedChars);
 	}
 }
