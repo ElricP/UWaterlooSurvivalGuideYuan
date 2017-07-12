@@ -25,7 +25,11 @@ public class PlayerController : MonoBehaviour {
 
 	public GameObject HealthKit;
 	public GameObject Armor;
+	public float armorDuration;
 	public GameObject SwiftyShoes;
+	public float SwiftyShoesDuration;
+
+	private float damage = 5;
 private Vector2 facingDirection;
 
 private float abilityDuration = 0.5F;
@@ -93,21 +97,21 @@ private float abilityDuration = 0.5F;
 		if (item.gameObject.tag == "Boost") {
 			Destroy (item.gameObject);
 			StartCoroutine ("ApplyBoost");
-		} else if (item.gameObject.tag == "HealthKit") {
+		} 
+		else if (item.gameObject.tag == "HealthKit") {
 			Destroy (item.gameObject);
-
-			// TODO: increase player's health
-
-		} else if (item.gameObject.tag == "Armor") {
+			currentHealth = currentHealth + 10;
+		} 
+		else if (item.gameObject.tag == "Armor") {
 			Destroy (item.gameObject);
-
-			// TODO: damage down
-
-		} else if (item.gameObject.tag == "SwiftyShoes") {
+			StartCoroutine ("ApplyBoost");
+		} 
+		else if (item.gameObject.tag == "SwiftyShoes") {
 			Destroy (item.gameObject);
-			speed = speed * speedMultiplier;
-		} else if (item.gameObject.layer == 9 && !invincible) {
-			currentHealth = currentHealth - 5;
+			StartCoroutine ("ApplySwiftyShoes");
+		} 
+		else if (item.gameObject.layer == 9 && !invincible) {
+			currentHealth = currentHealth - damage;
 		}
 	}
 
@@ -115,5 +119,18 @@ private float abilityDuration = 0.5F;
 		attackSpeed = attackSpeed * boostMultiplier;
 		yield return new WaitForSecondsRealtime (boostDuration);
 		attackSpeed = attackSpeed / boostMultiplier;
+	}
+
+	IEnumerator ApplyArmor() {
+		float tmp = damage;
+		damage = damage - 2 <= 0 ? 0 : damage - 2;
+		yield return new WaitForSecondsRealtime (armorDuration);
+		damage = tmp;
+	}
+
+	IEnumerator ApplySwiftyShoes() {
+		speed = speed * speedMultiplier;
+		yield return new WaitForSecondsRealtime (SwiftyShoesDuration);
+		speed = speed / speedMultiplier;
 	}
 }
