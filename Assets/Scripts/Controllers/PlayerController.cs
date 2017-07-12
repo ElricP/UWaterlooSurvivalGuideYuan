@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using System.IO;
 
 public class PlayerController : MonoBehaviour {
-	public RewardPanel rewardPanel;
 
 	public float maxHealth { get; private set;}
 	public float currentHealth{ get; private set;}
@@ -75,10 +74,7 @@ private float abilityDuration = 0.5F;
 		}
 
 	}
-	void Die(){
-		rewardPanel.gameObject.SetActive (true);
-		rewardPanel.gameObject.GetComponent<RewardPanel> ().Reward ();
-		GameObject.Find ("CombatControlPanel").SetActive (false);
+	public void Die(){
 		died = true;
 	}
 	void Fire(){
