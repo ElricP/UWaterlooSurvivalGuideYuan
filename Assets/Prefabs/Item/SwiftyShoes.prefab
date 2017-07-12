@@ -9,20 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1030594074188094}
+  m_RootGameObject: {fileID: 1912418391395012}
   m_IsPrefabParent: 1
---- !u!1 &1030594074188094
+--- !u!1 &1912418391395012
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4346696439962062}
-  - component: {fileID: 33496044790875262}
-  - component: {fileID: 23787186095194272}
-  - component: {fileID: 50136465770512930}
-  - component: {fileID: 61031664633407464}
+  - component: {fileID: 4241028952726310}
+  - component: {fileID: 33715242172426184}
+  - component: {fileID: 23266257164004018}
+  - component: {fileID: 50414696486503298}
+  - component: {fileID: 61315052700771654}
   m_Layer: 0
   m_Name: SwiftyShoes
   m_TagString: SwiftyShoes
@@ -30,25 +30,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4346696439962062
+--- !u!4 &4241028952726310
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1030594074188094}
+  m_GameObject: {fileID: 1912418391395012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2529, y: 2744, z: -90}
-  m_LocalScale: {x: 500, y: 500, z: 2}
+  m_LocalPosition: {x: -1000, y: 2000, z: -90}
+  m_LocalScale: {x: 150, y: -150, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23787186095194272
+--- !u!23 &23266257164004018
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1030594074188094}
+  m_GameObject: {fileID: 1912418391395012}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 098b03fdb4a6441549bde6a681d284b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,20 +75,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33496044790875262
+--- !u!33 &33715242172426184
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1030594074188094}
+  m_GameObject: {fileID: 1912418391395012}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!50 &50136465770512930
+--- !u!50 &50414696486503298
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1030594074188094}
+  m_GameObject: {fileID: 1912418391395012}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -102,12 +102,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &61031664633407464
+--- !u!61 &61315052700771654
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1030594074188094}
+  m_GameObject: {fileID: 1912418391395012}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
