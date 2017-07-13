@@ -12,8 +12,7 @@ public class RewardPanel : MonoBehaviour {
 	public Text expText;
 	public Text goldText;
 	public Text diamondText;
-	public bool active;
-	public bool activeH; 
+
 	//public GameObject rewardPanel;
 
 	// Use this for initialization
@@ -22,8 +21,6 @@ public class RewardPanel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		 active = gameObject.activeSelf;
-		activeH = gameObject.activeInHierarchy;
 	}
 
 	public void SetAllTexts() {
@@ -46,9 +43,9 @@ public class RewardPanel : MonoBehaviour {
 
 	public void Reward() {
 		SetAllTexts ();
-		Account.account.SetExp (Account.account.GetExp () + expReward);
-		Account.account.SetGold (Account.account.GetGold () + goldReward);
-		Account.account.SetDiamond (Account.account.GetDiamond () + diamondReward);
+		Account.account.ExpIncrease (expReward);
+		Account.account.GoldChange (goldReward);
+		Account.account.DiamondChange (diamondReward);
 	}
 
 }

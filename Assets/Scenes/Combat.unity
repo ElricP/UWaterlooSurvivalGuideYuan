@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c3c865782347f41b6358d9fba14b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRange: 100
+  MovementRange: 50
   axesToUse: 0
   horizontalAxisName: Horizontal
   verticalAxisName: Vertical
@@ -3015,8 +3015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01131e1aac6d74c09a22d828fe7c7073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Items: []
-  spawnTime: 20
+  Items:
+  - {fileID: 1691626396580938, guid: 526ed1de9e41940cfb643e63c731a983, type: 2}
+  - {fileID: 1858954927280402, guid: db9666d191016459aa63a60c3fc94049, type: 2}
+  - {fileID: 1912418391395012, guid: 90a4c6034040845db86a6fcd4d970ff1, type: 2}
+  - {fileID: 1095685678186644, guid: 527147536c0624ab7b9f17a04b19f4be, type: 2}
+  spawnTime: 2
 --- !u!4 &1528498291
 Transform:
   m_ObjectHideFlags: 0
@@ -3114,14 +3118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992a4bb57bc3140f19c269ff40ab6690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expReward: 0
-  goldReward: 0
-  diamondReward: 0
-  expText: {fileID: 0}
-  goldText: {fileID: 0}
-  diamondText: {fileID: 0}
-  active: 0
-  activeH: 0
+  expReward: 1000
+  goldReward: 100
+  diamondReward: 10
+  expText: {fileID: 1923638752}
+  goldText: {fileID: 112834617}
+  diamondText: {fileID: 334289647}
 --- !u!1001 &1586705088
 Prefab:
   m_ObjectHideFlags: 0
@@ -4040,7 +4042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c3c865782347f41b6358d9fba14b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRange: 100
+  MovementRange: 50
   axesToUse: 0
   horizontalAxisName: Horizontal2
   verticalAxisName: Vertical2
@@ -4526,6 +4528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewardPanel: {fileID: 1551808832}
+  controlPanel: {fileID: 1793700593}
 --- !u!4 &1974576802
 Transform:
   m_ObjectHideFlags: 0

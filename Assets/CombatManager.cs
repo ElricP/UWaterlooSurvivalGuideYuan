@@ -5,18 +5,22 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour {
 	[SerializeField]
 	private RewardPanel rewardPanel;
+	[SerializeField]
+	private GameObject controlPanel;
+	private bool rewarded = false;
 	// Use this for initialization
 	void Start () {
-		
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if(GameObject.Find("Player").GetComponent<PlayerController>().currentHealth <= 0)
+		if(!rewarded && GameObject.Find("Player").GetComponent<PlayerController>().currentHealth <= 0)
 		{
+			rewarded = true;
 			rewardPanel.gameObject.SetActive (true);
 			rewardPanel.gameObject.GetComponent<RewardPanel> ().Reward ();
-			GameObject.Find ("CombatControlPanel").SetActive (false);
+			//controlPanel.gameObject.GetComponent.SetActive (false);
+			//GameObject.Find ("CombatControlPanel").SetActive (false);
 			//GameObject.Find("Player").GetComponent<PlayerController>().Die();
 		}
 	}
