@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d1d22458a63d042b899c257eed227f69
-timeCreated: 1497843618
+timeCreated: 1500065529
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -85,9 +85,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 240
+        y: 243
         width: 145
-        height: 144
+        height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -97,8 +97,8 @@ TextureImporter:
       name: char0_selection
       rect:
         serializedVersion: 2
-        x: 149
-        y: 319
+        x: 153
+        y: 325
         width: 54
         height: 62
       alignment: 0
@@ -110,8 +110,8 @@ TextureImporter:
       name: char0_icon
       rect:
         serializedVersion: 2
-        x: 2
-        y: 191
+        x: 6
+        y: 195
         width: 45
         height: 46
       alignment: 0

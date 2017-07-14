@@ -16,6 +16,7 @@ public class CharacterSelector : MonoBehaviour {
 	public Text backGroundText;
 	public Image curCharImage;
 	public SpriteLibrary spriteDictionary;
+	public CharLibrary charLibrary;
 
 	private List<bool> unlockedCharacters;
 	void Awake() {
@@ -41,17 +42,17 @@ public class CharacterSelector : MonoBehaviour {
 			CharacterButton charButton = newButton.GetComponent<CharacterButton>();
 			string spriteName = "char" + (i > 2 ? 0 : i).ToString() + "_main";
 			Sprite s = spriteDictionary.charSpriteDic[spriteName];
-			charButton.Setup(i, unlockedCharacters[i], this, s);
+			charButton.Setup(i, charLibrary.GetName(i), unlockedCharacters[i], this, s);
 		}
 	}
 
 	public void SetCharInfo(int charId) {
-		charName.text = "UW Student " + charId.ToString ();
-		healthText.text = (charId > 1 ? 35 : 25+charId).ToString();
-		attackText.text = (charId > 1 ? 20 : 40+charId).ToString();
-		speedText.text = (charId > 1 ? 50 : 40+charId).ToString();
-		//abilityText.text = (charId > 0 ? 50 : 40).ToString();
-		//backGroundText.text = (charId > 0 ? 50 : 40).ToString();
+		charName.text = charLibrary.GetName(charId);
+		healthText.text = charLibrary.GetHealth(charId).ToString();
+		attackText.text = charLibrary.GetAttack(charId).ToString();
+		speedText.text = charLibrary.GetSpeed(charId).ToString();
+		abilityText.text = "Ability: "+charLibrary.GetAbility(charId);
+		backGroundText.text = charLibrary.GetStory(charId);
 
 		string spriteName = "char" + (charId > 2 ? 0 : charId).ToString() + "_selection";
 		curCharImage.overrideSprite = spriteDictionary.charSpriteDic[spriteName];

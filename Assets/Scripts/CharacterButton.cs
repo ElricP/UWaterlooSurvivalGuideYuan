@@ -28,8 +28,8 @@ public class CharacterButton : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	public void Setup (int charId, bool unlocked, CharacterSelector cur, Sprite buttonSprite) {
-		nameLabel.text = "TestChar_"+charId.ToString();
+	public void Setup (int charId, string name, bool unlocked, CharacterSelector cur, Sprite buttonSprite) {
+		nameLabel.text = name;
 		buttonComponent.image.overrideSprite = buttonSprite;
 		buttonComponent.interactable = unlocked;
 

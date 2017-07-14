@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-guid: 74e7cb874b3fb4bbdaabee891c2eee0f
-timeCreated: 1500065572
+guid: 35f00e8fd3c7e4c3583dcc6910a08274
+timeCreated: 1499888448
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: char1_main
-    21300002: char1_0
-    21300004: char1_selection
-    21300006: char1_icon
+  fileIDToRecycleName: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -38,7 +34,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -80,59 +76,7 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: char1_main
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 239
-        width: 146
-        height: 145
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: char1_0
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 324
-        width: 58
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: char1_selection
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 319
-        width: 50
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: char1_icon
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 190
-        width: 44
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 1, z: 3, w: 0}
-      outline: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
