@@ -35,9 +35,9 @@ public class GooseController : MonoBehaviour {
 			aud.loop = false;
 		}
 
-		if (dir.y > 0) {
+		if (dir.x > 0) {
 			transform.localRotation = Quaternion.Euler(0, 180, 0);
-		} else if (dir.y < 0) {
+		} else if (dir.x < 0) {
 			transform.localRotation = Quaternion.Euler(0, 0, 0);
 		}
 
