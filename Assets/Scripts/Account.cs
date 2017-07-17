@@ -16,7 +16,8 @@ public class Account : MonoBehaviour {
 	private int level;
 	private int gold;
 	private int diamond;
-
+	private float musicVolume;
+	private float effectVolume;
 
 	// Ensure only one account exists and persist over scenes
 	void Awake() {
@@ -144,4 +145,19 @@ public class Account : MonoBehaviour {
 		diamond += changeDiamond;
 	}		
 
+	public float GetMusicVolume() {
+		return musicVolume;
+	}
+
+	public float GetEffectVolume() {
+		return effectVolume;
+	}
+
+	public void SetMusicVolume(float v) {
+		musicVolume = v;
+	}
+
+	public void SetEffectVolume(float v) {
+		effectVolume = v;
+	}
 }

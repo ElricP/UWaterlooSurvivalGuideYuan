@@ -13,6 +13,7 @@ public class GooseController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		aud = GetComponent<AudioSource> ();
+		//aud.volume = Account.account.GetEffectVolume ();
 		//rb = GetComponent<Rigidbody2D>();
 		//player = GameObject.Find ("Player");
 	}

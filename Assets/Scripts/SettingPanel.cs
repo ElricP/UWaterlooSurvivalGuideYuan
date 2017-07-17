@@ -1,28 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingPanel : MonoBehaviour {
 
+	public Slider musicSlider;
+	public Slider soundSlider;
 	private int BGMVolume;
 	private int SFXVolume;
 
 	// Use this for initialization
 	void Start () {
-		BGMVolume = 50;
-		SFXVolume = 50;
-	}
-	
-	// Update is called once per frame
-	void Update () {
 		
 	}
 
-	void showSettingPanel () {
-
+	void OnEnable() {
+		musicSlider.value = Account.account.GetMusicVolume ();
 	}
 
-	void hideSettingPanel () {
+	public void ChangeMusic() {
+		float v = musicSlider.value;
+		Account.account.SetMusicVolume (v);
+	}
 
+	public void ChangeSoundEffect() {
+		float v = soundSlider.value;
+		Account.account.SetEffectVolume (v);
 	}
 }

@@ -210,7 +210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.59131, y: -175.36768}
+  m_AnchoredPosition: {x: 198.5, y: -175.33334}
   m_SizeDelta: {x: 218, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &32895052
@@ -270,6 +270,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 388133157}
+        m_MethodName: ChangeMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &43228015
@@ -1901,7 +1912,7 @@ GameObject:
   - component: {fileID: 300887022}
   - component: {fileID: 300887021}
   m_Layer: 5
-  m_Name: Master Volume Label
+  m_Name: SoundEffect Volume Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1922,7 +1933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.59131, y: -242.05128}
+  m_AnchoredPosition: {x: 198.5, y: -242.00002}
   m_SizeDelta: {x: 235, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300887021
@@ -2389,6 +2400,7 @@ GameObject:
   - component: {fileID: 388133155}
   - component: {fileID: 388133154}
   - component: {fileID: 388133156}
+  - component: {fileID: 388133157}
   m_Layer: 5
   m_Name: SettingPanel
   m_TagString: Untagged
@@ -2475,6 +2487,19 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &388133157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 388133152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a824b494532e4da69d3a6097da48d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 32895052}
+  soundSlider: {fileID: 512399679}
 --- !u!1 &400204478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,7 +2876,7 @@ GameObject:
   - component: {fileID: 512399678}
   - component: {fileID: 512399679}
   m_Layer: 5
-  m_Name: Master volume label
+  m_Name: SoundEffect volume Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2875,7 +2900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.59131, y: -309.2351}
+  m_AnchoredPosition: {x: 198.5, y: -309.1667}
   m_SizeDelta: {x: 212, y: 19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512399679
@@ -2924,9 +2949,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 776835678}
-        m_MethodName: set_volume
-        m_Mode: 0
+      - m_Target: {fileID: 388133157}
+        m_MethodName: ChangeSoundEffect
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3357,7 +3382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.59131, y: -109.68384}
+  m_AnchoredPosition: {x: 198.5, y: -109.66667}
   m_SizeDelta: {x: 260, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630895089
@@ -4006,7 +4031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.59131, y: -26.5}
+  m_AnchoredPosition: {x: 198.5, y: -26.5}
   m_SizeDelta: {x: 192, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792931334
@@ -5549,7 +5574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.048750002, y: 0.7816608}
   m_AnchorMax: {x: 0.13625, y: 1}
-  m_AnchoredPosition: {x: -10.08667, y: -1.4682617}
+  m_AnchoredPosition: {x: -10.086914, y: -1.4682617}
   m_SizeDelta: {x: -5, y: -23}
   m_Pivot: {x: 0.5000005, y: 0.5}
 --- !u!114 &1099169178
@@ -12179,7 +12204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.59131, y: -371.41895}
+  m_AnchoredPosition: {x: 198.5, y: -371.33334}
   m_SizeDelta: {x: 109, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954274282
