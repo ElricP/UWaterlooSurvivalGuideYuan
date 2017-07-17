@@ -7,8 +7,8 @@ public class HealthBarController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameObject.GetComponent<Image> ().fillAmount = 
-			GameObject.Find("Player").GetComponent<PlayerController>().currentHealth/GameObject.Find("Player").GetComponent<PlayerController>().maxHealth;
+		//gameObject.GetComponent<Image> ().fillAmount = 
+			//GameObject.Find("Player").GetComponent<PlayerController>().currentHealth/GameObject.Find("Player").GetComponent<PlayerController>().maxHealth;
 	}
 	
 	// Update is called once per frame

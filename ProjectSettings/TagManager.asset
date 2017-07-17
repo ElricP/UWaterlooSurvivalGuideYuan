@@ -8,6 +8,8 @@ TagManager:
   - HealthKit
   - Armor
   - SwiftyShoes
+  - Goose
+  - Bullet
   layers:
   - Default
   - TransparentFX

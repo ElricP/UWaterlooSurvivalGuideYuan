@@ -24,7 +24,7 @@ public class BulletController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collider) {
 		//Debug.Log("Collision Detected");
-		if (collider.gameObject.layer == 9) { //layer terrian is 9
+		if (collider.gameObject.layer == 9 || collider.gameObject.tag == "Goose") { //layer terrian is 9
 			Destroy (gameObject);
 		} else {
 		}

@@ -102,7 +102,7 @@ private float abilityDuration = 0.5F;
 		return abilityReady;
 	}
 	void OnCollisionEnter2D(Collision2D item) {
-		//Debug.Log("Collision Detected");
+		// Debug.Log("Collision Detected");
 		if (item.gameObject.tag == "Boost") {
 			Destroy (item.gameObject);
 			StartCoroutine ("ApplyBoost");
@@ -120,8 +120,12 @@ private float abilityDuration = 0.5F;
 			StartCoroutine ("ApplySwiftyShoes");
 		} 
 		else if (item.gameObject.layer == 9 && !invincible) {
+			//currentHealth = currentHealth - damage;
+		} 
+		else if (item.gameObject.tag == "Goose" && !invincible) {
+			Debug.Log("Goose attack");
 			currentHealth = currentHealth - damage;
-		}
+		} 
 	}
 
 	IEnumerator ApplyBoost() {
