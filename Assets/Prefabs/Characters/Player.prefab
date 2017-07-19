@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 222828531304235326}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd2b7e77e4d2478aab4840fd94cc2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardPanel: {fileID: 0}
   speed: 15
   attackSpeed: 2
   abilityCooldown: 5

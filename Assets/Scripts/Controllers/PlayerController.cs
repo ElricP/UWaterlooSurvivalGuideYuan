@@ -122,7 +122,7 @@ private float abilityDuration = 0.5F;
 		else if (item.gameObject.layer == 9 && !invincible) {
 			//currentHealth = currentHealth - damage;
 		} 
-		else if (item.gameObject.tag == "Goose" && !invincible) {
+		else if ((item.gameObject.tag == "Goose" || item.gameObject.tag == "WaveBullet") && !invincible) {
 			Debug.Log("Goose attack");
 			currentHealth = currentHealth - damage;
 		} 

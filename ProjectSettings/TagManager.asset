@@ -10,6 +10,7 @@ TagManager:
   - SwiftyShoes
   - Goose
   - Bullet
+  - WaveBullet
   layers:
   - Default
   - TransparentFX

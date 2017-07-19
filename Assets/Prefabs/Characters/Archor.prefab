@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 222901342826555740}
   m_Layer: 0
   m_Name: Archor
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,9 @@ MonoBehaviour:
   boostDuration: 20
   HealthKit: {fileID: 0}
   Armor: {fileID: 0}
+  armorDuration: 0
   SwiftyShoes: {fileID: 0}
+  SwiftyShoesDuration: 0
 --- !u!222 &222901342826555740
 CanvasRenderer:
   m_ObjectHideFlags: 1

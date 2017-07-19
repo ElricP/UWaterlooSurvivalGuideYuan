@@ -1094,7 +1094,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4417618321240928, guid: 527147536c0624ab7b9f17a04b19f4be, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1095685678186644, guid: 527147536c0624ab7b9f17a04b19f4be, type: 2}
       propertyPath: m_IsActive
@@ -1321,13 +1321,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4247581307547132, guid: 63f607462e7d34283b40c3c26b6b15b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 127.563614
+    - target: {fileID: 4818578139962866, guid: 63f607462e7d34283b40c3c26b6b15b0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.559
       objectReference: {fileID: 0}
-    - target: {fileID: 4247581307547132, guid: 63f607462e7d34283b40c3c26b6b15b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 123.94309
+    - target: {fileID: 4818578139962866, guid: 63f607462e7d34283b40c3c26b6b15b0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.814
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63f607462e7d34283b40c3c26b6b15b0, type: 2}
@@ -2185,7 +2185,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4241028952726310, guid: 90a4c6034040845db86a6fcd4d970ff1, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90a4c6034040845db86a6fcd4d970ff1, type: 2}
@@ -3849,7 +3849,7 @@ Transform:
   - {fileID: 2132893355}
   - {fileID: 87523952}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1793700593
 GameObject:
@@ -4380,7 +4380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1921664252
 GameObject:
