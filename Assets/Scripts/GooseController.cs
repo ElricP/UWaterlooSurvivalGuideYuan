@@ -19,6 +19,7 @@ public class GooseController : MonoBehaviour {
 		gun = transform.Find ("Gun");
 		//aud.volume = Account.account.GetEffectVolume ();
 		//rb = GetComponent<Rigidbody2D>();
+		Physics2D.IgnoreCollision(bullet.GetComponent<CircleCollider2D>(), gameObject.GetComponent<PolygonCollider2D>());
 
 	}
 	
