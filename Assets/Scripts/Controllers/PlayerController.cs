@@ -7,17 +7,17 @@ using System.IO;
 
 public class PlayerController : MonoBehaviour {
 
-	public float maxHealth { get; private set;}
-	public float currentHealth{ get; private set;}
-	private bool invincible;
+	public float maxHealth { get; protected set;}
+	public float currentHealth{ get; protected set;}
+	protected bool invincible;
 	public int speed;
 	public float attackSpeed;
 	public float abilityCooldown;
-	Rigidbody2D body;
-	Transform gun;
+	protected Rigidbody2D body;
+	protected Transform gun;
 	public GameObject bullet;
 	public bool abilityReady = true;
-	private float nextFire = 0.0F;
+	protected float nextFire = 0.0F;
 	public int speedMultiplier;
 	public int shadowStepBoost;
 
@@ -31,10 +31,10 @@ public class PlayerController : MonoBehaviour {
 	public GameObject SwiftyShoes;
 	public float SwiftyShoesDuration;
 
-	private float damage = 5;
-	private bool died = false;
-private Vector2 facingDirection;
-private float abilityDuration = 0.5F;
+	protected float damage = 5;
+	protected bool died = false;
+protected Vector2 facingDirection;
+protected float abilityDuration = 0.5F;
 	// Use this for initialization
 	void Start () {
 		body = this.GetComponent<Rigidbody2D> ();
@@ -77,11 +77,11 @@ private float abilityDuration = 0.5F;
 	public void Die(){
 		died = true;
 	}
-	void Fire(){
+	protected void Fire(){
 		Instantiate (bullet, gun.position,Quaternion.identity);
 	}
 
-	IEnumerator UseAbility(){ //prototype gets shadowstep ability
+	protected IEnumerator UseAbility(){ //prototype gets shadowstep ability
 		abilityReady = false;
 		speed = speed * shadowStepBoost;	//apply ability effect
 		int countDown = (int)abilityCooldown;
@@ -101,7 +101,7 @@ private float abilityDuration = 0.5F;
 	public bool AbilityReady(){
 		return abilityReady;
 	}
-	void OnCollisionEnter2D(Collision2D item) {
+	protected void OnCollisionEnter2D(Collision2D item) {
 		// Debug.Log("Collision Detected");
 		if (item.gameObject.tag == "Boost") {
 			Destroy (item.gameObject);
@@ -128,20 +128,20 @@ private float abilityDuration = 0.5F;
 		} 
 	}
 
-	IEnumerator ApplyBoost() {
+	protected IEnumerator ApplyBoost() {
 		attackSpeed = attackSpeed * boostMultiplier;
 		yield return new WaitForSecondsRealtime (boostDuration);
 		attackSpeed = attackSpeed / boostMultiplier;
 	}
 
-	IEnumerator ApplyArmor() {
+	protected IEnumerator ApplyArmor() {
 		float tmp = damage;
 		damage = damage - 2 <= 0 ? 0 : damage - 2;
 		yield return new WaitForSecondsRealtime (armorDuration);
 		damage = tmp;
 	}
 
-	IEnumerator ApplySwiftyShoes() {
+	protected IEnumerator ApplySwiftyShoes() {
 		speed = speed * speedMultiplier;
 		yield return new WaitForSecondsRealtime (SwiftyShoesDuration);
 		speed = speed / speedMultiplier;
