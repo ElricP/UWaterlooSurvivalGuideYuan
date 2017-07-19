@@ -35,11 +35,11 @@ GameObject:
   m_Component:
   - component: {fileID: 224122154619108338}
   - component: {fileID: 50159849280658784}
-  - component: {fileID: 61288128208272464}
   - component: {fileID: 23195590184360444}
   - component: {fileID: 33261219355858696}
   - component: {fileID: 222371526961805150}
   - component: {fileID: 114599474162434754}
+  - component: {fileID: 58204557809859824}
   m_Layer: 0
   m_Name: Thomas
   m_TagString: Player
@@ -119,8 +119,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61288128208272464
-BoxCollider2D:
+--- !u!58 &58204557809859824
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -132,18 +132,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &114599474162434754
 MonoBehaviour:
   m_ObjectHideFlags: 1

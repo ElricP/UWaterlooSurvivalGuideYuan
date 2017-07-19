@@ -12,7 +12,7 @@ public class ThomasController : PlayerController {
 		gun = transform.Find ("Gun");
 		maxHealth = 200f;
 		currentHealth = 200f;
-		Physics2D.IgnoreCollision(bullet.GetComponent<CircleCollider2D>(), gameObject.GetComponent<BoxCollider2D>());
+
 		invincible = false;
 	}
 
@@ -58,7 +58,7 @@ public class ThomasController : PlayerController {
 			Debug.Log("Goose attack");
 			currentHealth = currentHealth - damage;
 		} else if (item.gameObject.tag == "Bullet") {
-			Physics2D.IgnoreCollision(item.gameObject.GetComponent<CircleCollider2D>(), gameObject.GetComponent<BoxCollider2D>());
+			Physics2D.IgnoreCollision(item.gameObject.GetComponent<CircleCollider2D>(), gameObject.GetComponent<CircleCollider2D>());
 		} 
 	}
 

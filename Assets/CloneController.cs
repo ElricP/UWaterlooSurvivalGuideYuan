@@ -41,7 +41,7 @@ public class CloneController : PlayerController {
 	public void OnCollisionEnter2D (Collision2D item) {
 
 		if (item.gameObject.tag == "Bullet") {
-			Physics2D.IgnoreCollision(item.gameObject.GetComponent<CircleCollider2D>(), gameObject.GetComponent<BoxCollider2D>());
+			Physics2D.IgnoreCollision(item.gameObject.GetComponent<CircleCollider2D>(), gameObject.GetComponent<CircleCollider2D>());
 		} 
 		else if ((item.gameObject.tag == "Goose" || item.gameObject.tag == "WaveBullet") && !invincible) {
 			Debug.Log("Goose attack");
