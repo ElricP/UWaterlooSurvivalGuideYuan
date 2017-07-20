@@ -138,7 +138,7 @@ PlayerSettings:
   useHDRDisplay: 0
   applicationIdentifier:
     Standalone: com.Hortons.UWSurvivalGuide
-    iOS: com.UWSurvivalGuide.ios
+    iOS: com.unity3d.UWSG
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -509,7 +509,9 @@ PlayerSettings:
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Standalone: 1
+    iOS: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: UW Survival Guide

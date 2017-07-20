@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>420479266961-sr6mn28vsd9mebv76ea67j5b10qfbddb.apps.googleusercontent.com</string>
+	<string>329444860105-1kndbnd4rha1l8412t75fq6qa4c0hkfb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.420479266961-sr6mn28vsd9mebv76ea67j5b10qfbddb</string>
+	<string>com.googleusercontent.apps.329444860105-1kndbnd4rha1l8412t75fq6qa4c0hkfb</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDcdN15xPDQFp-EOrstSGxqJ2JOv2HAIOc</string>
+	<string>AIzaSyC8DFE39VF6rmZnkkpKnGOIoOu_r80aKqk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>420479266961</string>
+	<string>329444860105</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.UWSurvivalGuide.ios</string>
+	<string>com.unity3d.UWSG</string>
 	<key>PROJECT_ID</key>
-	<string>uwsurvialguide</string>
+	<string>uwsg-4c77b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>uwsurvialguide.appspot.com</string>
+	<string>uwsg-4c77b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:420479266961:ios:b5a8debe59e9aaa6</string>
+	<string>1:329444860105:ios:2fab699b328530f7</string>
 	<key>DATABASE_URL</key>
-	<string>https://uwsurvialguide.firebaseio.com</string>
+	<string>https://uwsg-4c77b.firebaseio.com</string>
 </dict>
 </plist>

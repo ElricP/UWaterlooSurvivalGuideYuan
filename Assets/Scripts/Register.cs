@@ -16,21 +16,27 @@ public class Register : MonoBehaviour {
 	private bool EmailValid;
 	private string RegisterMessage;
 
+	private Firebase.Auth.FirebaseAuth auth;
+	private Firebase.Auth.FirebaseUser user;
+
 	// Use this for initialization
 	void Start () {
 		EmailValid = false;
 		RegisterMessage = "";
+		InitializeFirebase ();
 
 	}
-
+	void InitializeFirebase() {
+		auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+		auth.StateChanged += AuthStateChanged;
+		AuthStateChanged(this, null);
+	}
 
 
 	public void RegisterButton (){
 		if (Password != ConfirmPassword) {
 			return;
 		}
-
-		Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 
 		auth.CreateUserWithEmailAndPasswordAsync (Email, Password).ContinueWith (task => {
 			if (task.IsCanceled) {
@@ -82,5 +88,21 @@ public class Register : MonoBehaviour {
 		Email = email.GetComponent<InputField> ().text;
 		Password = password.GetComponent<InputField> ().text;
 		ConfirmPassword = confirmPassword.GetComponent<InputField> ().text;
+	}
+
+	void AuthStateChanged(object sender, System.EventArgs eventArgs) {
+		if (auth.CurrentUser != user) {
+			bool signedIn = user != auth.CurrentUser && auth.CurrentUser != null;
+			if (!signedIn && user != null) {
+				Debug.LogError("Signed out " + user.UserId);
+			}
+			user = auth.CurrentUser;
+			if (signedIn) {
+				Debug.LogError("Signed in " + user.UserId);
+				//displayName = user.DisplayName ?? "";
+				//emailAddress = user.Email ?? "";
+				//photoUrl = user.PhotoUrl ?? "";
+			}
+		}
 	}
 }
