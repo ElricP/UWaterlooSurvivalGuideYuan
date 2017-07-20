@@ -73,7 +73,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4b3340b89d65a4795aacbdc2d381f790, type: 2}
+  - {fileID: 2100000, guid: 538bf16a8fb5d4c71a319937ccfe9e04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,16 +142,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1011625249756396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b226fa709d674257951761c3643df3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 917f4472ce06e44388df8b96d635561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 20
   attackSpeed: 1
   abilityCooldown: 0
   bullet: {fileID: 1274086793270620, guid: 55bd87803fe234be9b023013449a6a93, type: 2}
-  abilityReady: 0
+  abilityReady: 1
   speedMultiplier: 1
-  shadowStepBoost: 1
+  shadowStepBoost: 0
   Boost: {fileID: 0}
   boostMultiplier: 1
   boostDuration: 0
