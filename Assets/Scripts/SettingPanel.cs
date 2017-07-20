@@ -16,9 +16,9 @@ public class SettingPanel : MonoBehaviour {
 	}
 
 	void OnEnable() {
-		Account a = Account.account;
-		musicSlider.value = a?a.GetMusicVolume ():0.5f;
-		soundSlider.value = a?a.GetMusicVolume ():0.5f;
+		//Account a = Account.account;
+		//musicSlider.value = a?a.GetMusicVolume ():0.5f;
+		//soundSlider.value = a?a.GetMusicVolume ():0.5f;
 	}
 
 	public void ChangeMusic() {
