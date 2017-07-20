@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GooseController : MonoBehaviour {
 	public float speed;
-	public GameObject player;
-	public float health = 25;
+	public float health = 5;
 	public GameObject bullet;
+	private GameObject player;	
+	private GameObject rewardPanel;
 	Transform gun;
 	//private Rigidbody2D rb;
 	// attack sound effect
@@ -77,6 +78,8 @@ public class GooseController : MonoBehaviour {
 			// call random generate item
 			// call killed goose counter
 			Destroy (gameObject);
+			rewardPanel = GameObject.Find ("RewardPanel");
+			rewardPanel.GetComponent<RewardPanel>().GooseKilled();
 		}
 	}
 }

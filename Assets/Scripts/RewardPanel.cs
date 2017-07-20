@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class RewardPanel : MonoBehaviour {
 
-	public int expReward;
-	public int goldReward;
-	public int diamondReward;
+	private int expReward = 100;
+	private int goldReward = 100;
+	private int diamondReward = 0;
+	private int killedGoose = 0;
 
 	public Text expText;
 	public Text goldText;
@@ -42,10 +43,16 @@ public class RewardPanel : MonoBehaviour {
 	}
 
 	public void Reward() {
+		expReward += killedGoose * 5;
+		goldReward += killedGoose * 10;
+		diamondReward += killedGoose / 10;
 		SetAllTexts ();
 		Account.account.ExpIncrease (expReward);
 		Account.account.GoldChange (goldReward);
 		Account.account.DiamondChange (diamondReward);
 	}
 
+	public void GooseKilled() {
+		killedGoose++;
+	}
 }
