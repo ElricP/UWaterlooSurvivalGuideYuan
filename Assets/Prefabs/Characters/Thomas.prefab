@@ -73,7 +73,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4b3340b89d65a4795aacbdc2d381f790, type: 2}
+  - {fileID: 2100000, guid: 538bf16a8fb5d4c71a319937ccfe9e04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748299300591200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccc4be7acb99494980878654e7b7370, type: 3}
+  m_Script: {fileID: 11500000, guid: bcb131e1b755b483cb1524e61b22b6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
@@ -151,16 +151,17 @@ MonoBehaviour:
   bullet: {fileID: 1274086793270620, guid: 55bd87803fe234be9b023013449a6a93, type: 2}
   abilityReady: 1
   speedMultiplier: 2
-  shadowStepBoost: 0
+  shadowStepBoost: 1
   Boost: {fileID: 1095685678186644, guid: 527147536c0624ab7b9f17a04b19f4be, type: 2}
-  boostMultiplier: 1
-  boostDuration: 0
-  HealthKit: {fileID: 0}
+  boostMultiplier: 2
+  boostDuration: 5
+  HealthKit: {fileID: 1858954927280402, guid: db9666d191016459aa63a60c3fc94049, type: 2}
   Armor: {fileID: 0}
-  armorDuration: 1
-  SwiftyShoes: {fileID: 0}
-  SwiftyShoesDuration: 0
-  clone: {fileID: 1011625249756396, guid: 52a8af45ce86a47a6955adc10eccc0e9, type: 2}
+  armorDuration: 0
+  SwiftyShoes: {fileID: 1912418391395012, guid: 90a4c6034040845db86a6fcd4d970ff1,
+    type: 2}
+  SwiftyShoesDuration: 10
+  clone: {fileID: 1011625249756396, guid: aab1a573a061b418cb3e9281bec275b9, type: 2}
 --- !u!222 &222371526961805150
 CanvasRenderer:
   m_ObjectHideFlags: 1
