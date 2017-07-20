@@ -7,7 +7,7 @@ public class CharacterFactoryManager : MonoBehaviour {
 	private GameObject[] characters;
 	private int currentSelected = 0;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		currentSelected = Account.account.GetCurrentCharacter ();
 		Instantiate (characters [currentSelected], gameObject.transform.position, Quaternion.identity).gameObject.name = "Player";
 		GameObject.Find ("Player").SetActive (true);
