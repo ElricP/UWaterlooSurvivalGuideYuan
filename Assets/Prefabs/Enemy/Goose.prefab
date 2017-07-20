@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   player: {fileID: 0}
-  health: 25
+  health: 15
   bullet: {fileID: 1234473986576886, guid: 67537f48960664316888639102cce270, type: 2}
 --- !u!212 &212868582729899550
 SpriteRenderer:
