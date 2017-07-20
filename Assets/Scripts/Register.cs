@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
+using Firebase;
+using Firebase.Unity.Editor;
+using Firebase.Database;
 
 public class Register : MonoBehaviour {
 	public GameObject username;
@@ -24,6 +27,7 @@ public class Register : MonoBehaviour {
 		EmailValid = false;
 		RegisterMessage = "";
 		InitializeFirebase ();
+		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl ("https://uwsg-4c77b.firebaseio.com/");
 
 	}
 	void InitializeFirebase() {
@@ -54,20 +58,17 @@ public class Register : MonoBehaviour {
 		auth.SignInWithEmailAndPasswordAsync(Email,Password).ContinueWith (task => {
 			if (task.IsCanceled) {
 				Debug.LogError ("SignInWithEmailAndPasswordAsync canceled");
+				return;
 			}
 			if (task.IsFaulted) {
 				Debug.LogError ("SignInWithEmailAndPasswordAsync error" + task.Exception);
+				return;
 			}
 
 			Firebase.Auth.FirebaseUser NewUser = task.Result;
 			Debug.LogFormat ("Firebase user signed in: {0} ({1})", NewUser.DisplayName, NewUser.UserId);
 		});
-
-
-		Firebase.Auth.FirebaseUser user = auth.CurrentUser;
-		if (user != null) {
-			print ("ddddd");
-		}
+			
 
 			
 
