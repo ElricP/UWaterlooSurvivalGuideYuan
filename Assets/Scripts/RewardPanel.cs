@@ -8,7 +8,6 @@ public class RewardPanel : MonoBehaviour {
 	private int expReward = 100;
 	private int goldReward = 100;
 	private int diamondReward = 0;
-	private int killedGoose = 0;
 
 	public Text expText;
 	public Text goldText;
@@ -43,6 +42,8 @@ public class RewardPanel : MonoBehaviour {
 	}
 
 	public void Reward() {
+		GameObject gf= GameObject.Find ("GooseFactory");
+		int killedGoose = gf.GetComponent<GooseFactory> ().GetKilledGoose();
 		expReward += killedGoose * 5;
 		goldReward += killedGoose * 10;
 		diamondReward += killedGoose / 10;
@@ -50,9 +51,5 @@ public class RewardPanel : MonoBehaviour {
 		Account.account.ExpIncrease (expReward);
 		Account.account.GoldChange (goldReward);
 		Account.account.DiamondChange (diamondReward);
-	}
-
-	public void GooseKilled() {
-		killedGoose++;
 	}
 }

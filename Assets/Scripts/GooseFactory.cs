@@ -6,7 +6,7 @@ public class GooseFactory : MonoBehaviour {
 	[SerializeField]
 	private GameObject goose;
 	public float spawnTime = 5f;
-
+	private int killedGoose = 0;
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating ("GooseSpawn", spawnTime, spawnTime);
@@ -29,5 +29,13 @@ public class GooseFactory : MonoBehaviour {
 		int zCoord = -90;
 		Vector3 pos = new Vector3 (xCoord, yCoord, zCoord);
 		return pos;
+	}
+
+	public void GooseKilled() {
+		killedGoose++;
+	}
+
+	public int GetKilledGoose() {
+		return killedGoose;
 	}
 }

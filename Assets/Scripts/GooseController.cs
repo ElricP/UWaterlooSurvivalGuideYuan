@@ -7,7 +7,7 @@ public class GooseController : MonoBehaviour {
 	public float health = 5;
 	public GameObject bullet;
 	private GameObject player;	
-	private GameObject rewardPanel;
+	private GameObject reward;
 	Transform gun;
 	//private Rigidbody2D rb;
 	// attack sound effect
@@ -21,7 +21,7 @@ public class GooseController : MonoBehaviour {
 		//aud.volume = Account.account.GetEffectVolume ();
 		//rb = GetComponent<Rigidbody2D>();
 		Physics2D.IgnoreCollision(bullet.GetComponent<CircleCollider2D>(), gameObject.GetComponent<PolygonCollider2D>());
-
+		reward = GameObject.Find ("GooseFactory");
 	}
 	
 	// Update is called once per frame
@@ -78,8 +78,7 @@ public class GooseController : MonoBehaviour {
 			// call random generate item
 			// call killed goose counter
 			Destroy (gameObject);
-			rewardPanel = GameObject.Find ("RewardPanel");
-			rewardPanel.GetComponent<RewardPanel>().GooseKilled();
+			reward.GetComponent<GooseFactory>().GooseKilled();
 		}
 	}
 }
