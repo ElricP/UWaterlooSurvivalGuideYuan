@@ -49,10 +49,21 @@ public class Login : MonoBehaviour {
 
 		GameObject tmp = GameObject.Find ("debugText");
 		cvsDebug cvsdebug = tmp.GetComponent<cvsDebug> ();
+		if (Password == "" || Username == "") {
+			cvsdebug.debugLog = "Empty Field";
+			return;
+		}
+
+		if (!Username.Contains ("@")) {
+			cvsdebug.debugLog = "User do not exist";
+			return;
+		}
 		if (Password != "123456") {
 			cvsdebug.debugLog = "incorrect password";
 			return;
 		}
+			
+
 		List<bool> UnlockedC = new List<bool> (new bool[] {true,false,true});
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,true});
 		Account.account.Setup (100, 100, 50000, 1000, 0, Username, 1, 1, UnlockedC, UnlockedI);

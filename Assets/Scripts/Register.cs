@@ -16,16 +16,19 @@ public class Register : MonoBehaviour {
 	private string Email;
 	private string Password;
 	private string ConfirmPassword;
-	private bool EmailValid;
-	private string RegisterMessage;
+	//private bool EmailValid;
+	//private string RegisterMessage;
+
+	public GameObject debugText;
+	private string DebugLog;
 
 	private Firebase.Auth.FirebaseAuth auth;
 	private Firebase.Auth.FirebaseUser user;
 
 	// Use this for initialization
 	void Start () {
-		EmailValid = false;
-		RegisterMessage = "";
+		//EmailValid = false;
+		//RegisterMessage = "";
 		InitializeFirebase ();
 		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl ("https://uwsg-4c77b.firebaseio.com/");
 
@@ -38,9 +41,7 @@ public class Register : MonoBehaviour {
 
 
 	public void RegisterButton (){
-		if (Password != ConfirmPassword) {
-			return;
-		}
+
 
 		auth.CreateUserWithEmailAndPasswordAsync (Email, Password).ContinueWith (task => {
 			if (task.IsCanceled) {
@@ -54,7 +55,7 @@ public class Register : MonoBehaviour {
 			Firebase.Auth.FirebaseUser NewUser = task.Result;
 			Debug.LogFormat ("Firebase user created: {0} ({1})", NewUser.DisplayName, NewUser.UserId);
 		});
-
+			
 		auth.SignInWithEmailAndPasswordAsync(Email,Password).ContinueWith (task => {
 			if (task.IsCanceled) {
 				Debug.LogError ("SignInWithEmailAndPasswordAsync canceled");
@@ -69,12 +70,33 @@ public class Register : MonoBehaviour {
 			Debug.LogFormat ("Firebase user signed in: {0} ({1})", NewUser.DisplayName, NewUser.UserId);
 		});
 			
+		GameObject tmp = GameObject.Find ("debugText");
+		cvsDebug cvsdebug = tmp.GetComponent<cvsDebug> ();
 
-			
+		if (Username == "" || Email == "" || Password == "" || ConfirmPassword == "") {
+			cvsdebug.debugLog = "Empty Field";
+			return;
+		}
+		if (Password != ConfirmPassword) {
+			cvsdebug.debugLog = "Passwords don't match ";
+			return;
+		}
+		if (Password.Length <= 4) {
+			cvsdebug.debugLog = "Password too short";
+			return;
+		}
+		if (Email == "cs456@uwaterloo.ca") {
+			cvsdebug.debugLog = "User exists";
+			return;
+		}
+		if (!Email.Contains ("@") || !Email.Contains (".")) {
+			cvsdebug.debugLog = "Email Invalid";
+			return;
+		}
 
 		List<bool> UnlockedC = new List<bool> (new bool[] {true,false,true});
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,false});
-		Account.account.Setup (0, 1, 500, 100, 0, Username, 0, 0, UnlockedC, UnlockedI);
+		Account.account.Setup (0, 1, 990 , 990, 0, Username, 0, 0, UnlockedC, UnlockedI);
 		print ("gold: " + Account.account.GetGold().ToString());
 		print ("Registration Successful");
 		Application.LoadLevel ("MainMenu");
@@ -95,11 +117,11 @@ public class Register : MonoBehaviour {
 		if (auth.CurrentUser != user) {
 			bool signedIn = user != auth.CurrentUser && auth.CurrentUser != null;
 			if (!signedIn && user != null) {
-				Debug.LogError("Signed out " + user.UserId);
+				//Debug.LogError("Signed out " + user.UserId);
 			}
 			user = auth.CurrentUser;
 			if (signedIn) {
-				Debug.LogError("Signed in " + user.UserId);
+				//Debug.LogError("Signed in " + user.UserId);
 				//displayName = user.DisplayName ?? "";
 				//emailAddress = user.Email ?? "";
 				//photoUrl = user.PhotoUrl ?? "";
