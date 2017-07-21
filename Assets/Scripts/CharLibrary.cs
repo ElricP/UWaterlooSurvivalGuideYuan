@@ -13,32 +13,33 @@ public class CharLibrary: MonoBehaviour {
 	string[] storyDic = {
 		"A student of CS452 real time OS. While playing trains all day, he became " +
 			"a multi-thread master and learned how to thread fork himself in order to survive on campus.",
-		"A developer from Team Hortons. Almost invincible",
-		"A physics student in UW."
+		"A developer from Team Hortons. Got rekt in other shooting games and decided to make his/her " +
+			"own one where he/she can be invincible even for seconds.",
+		"A physics student in UW. Got annoyed with geese when thinking about meaning of life under an apple tree."
 	};
 
 	string[] abilityDic = {
-		"Thread fork - clone himself to help himself but increase the deadlock possibility ",
-		"Developer Power - using Team Hortons power: become invincible for 5 seconds",
-		"Shadow step - ",
+		"Thread fork - clone himself to help himself but increase the DEADlock possibility ",
+		"Coding is power - using Team Hortons power: become invincible for 5 seconds",
+		"Shadow step - sudden dash to avoid apple falling from the trees",
 	};
 
 	int[] attackDic = {
-		45,
-		40,
-		35
+		35,
+		80,
+		40
 	};
 
 	int[] healthDic = {
-		100,
-		90,
-		50
+		200,
+		300,
+		100
 	};
 
 	int[] speedDic = {
 		55,
-		20,
-		40
+		40,
+		15
 	};
 
 	public string GetName(int id) {

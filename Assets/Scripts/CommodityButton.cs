@@ -40,7 +40,7 @@ public class CommodityButton : MonoBehaviour {
 		this.diamondPrice = diamondPrice;
 		diamondPriceText.text = diamondPrice.ToString();
 		goldPriceText.text = goldPrice.ToString ();
-		iconImage.overrideSprite = buttonSprite;
+		iconImage.sprite = buttonSprite;
 		buttonComponent.interactable = !unlocked;
 
 		// TODO: Edit size
