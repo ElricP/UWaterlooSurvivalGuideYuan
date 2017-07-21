@@ -65,8 +65,8 @@ public class Login : MonoBehaviour {
 
 			
 
-		List<bool> UnlockedC = new List<bool> (new bool[] {true,false,true});
-		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,true});
+		List<bool> UnlockedC = new List<bool> (new bool[] {false,true,true});
+		List<bool> UnlockedI = new List<bool> (new bool[] {true,true,true});
 		Account.account.Setup (100, 10, 10000, 1000, 0, Username, 1, 1, UnlockedC, UnlockedI);
 		print ("Login Successful");
 		Application.LoadLevel ("MainMenu");
