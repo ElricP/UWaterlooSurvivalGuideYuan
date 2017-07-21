@@ -15,7 +15,8 @@ public class CharLibrary: MonoBehaviour {
 			"a multi-thread master and learned how to thread fork himself in order to survive on campus.",
 		"A developer from Team Hortons. Got rekt in other shooting games and decided to make his/her " +
 			"own one where he/she can be invincible even for seconds.",
-		"A physics student in UW. Got annoyed with geese when thinking about meaning of life under an apple tree."
+		"A physics student in UW. Newton found that Acceleration =mass/force. During battles, " +
+			"he periodically applies the great force to gain an immediate and powerful boost of speed, shadow step."
 	};
 
 	string[] abilityDic = {
