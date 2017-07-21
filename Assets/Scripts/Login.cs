@@ -62,15 +62,12 @@ public class Login : MonoBehaviour {
 			cvsdebug.debugLog = "incorrect password";
 			return;
 		}
-<<<<<<< HEAD
+
 			
 
 		List<bool> UnlockedC = new List<bool> (new bool[] {true,false,true});
-=======
-		List<bool> UnlockedC = new List<bool> (new bool[] {false,true,true});
->>>>>>> 5e3bea66e2552d04a4793ff9b40d82874f25bdb3
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,true});
-		Account.account.Setup (100, 10, 990, 100, 0, Username, 1, 1, UnlockedC, UnlockedI);
+		Account.account.Setup (100, 10, 10000, 1000, 0, Username, 1, 1, UnlockedC, UnlockedI);
 		print ("Login Successful");
 		Application.LoadLevel ("MainMenu");
 	}
