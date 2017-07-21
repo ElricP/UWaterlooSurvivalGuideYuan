@@ -94,9 +94,13 @@ public class Register : MonoBehaviour {
 			return;
 		}
 
-		List<bool> UnlockedC = new List<bool> (new bool[] {true,false,true});
+		List<bool> UnlockedC = new List<bool> (new bool[] {false,true,true});
 		List<bool> UnlockedI = new List<bool> (new bool[] {true,false,false});
+<<<<<<< HEAD
 		Account.account.Setup (0, 1, 990 , 990, 0, Username, 0, 0, UnlockedC, UnlockedI);
+=======
+		Account.account.Setup (0, 1, 900, 100, 0, Username, 0, 0, UnlockedC, UnlockedI);
+>>>>>>> 5e3bea66e2552d04a4793ff9b40d82874f25bdb3
 		print ("gold: " + Account.account.GetGold().ToString());
 		print ("Registration Successful");
 		Application.LoadLevel ("MainMenu");
