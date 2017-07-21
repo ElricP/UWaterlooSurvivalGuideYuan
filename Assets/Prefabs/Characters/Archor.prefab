@@ -19,12 +19,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224945194252931052}
-  - component: {fileID: 114495608828184440}
   - component: {fileID: 50560667141513690}
   - component: {fileID: 61694480278533682}
   - component: {fileID: 23686677698316232}
   - component: {fileID: 33884609257593512}
   - component: {fileID: 222901342826555740}
+  - component: {fileID: 114029230747840478}
   m_Layer: 0
   m_Name: Archor
   m_TagString: Player
@@ -144,7 +144,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114495608828184440
+--- !u!114 &114029230747840478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -152,24 +152,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1011761148683016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd2b7e77e4d2478aab4840fd94cc2fa, type: 3}
+  m_Script: {fileID: 11500000, guid: f7b17671c63c5417399a6cdc9844dd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  attackSpeed: 2
+  attackSpeed: 8
   abilityCooldown: 5
   bullet: {fileID: 1274086793270620, guid: 55bd87803fe234be9b023013449a6a93, type: 2}
   abilityReady: 1
   speedMultiplier: 3
-  shadowStepBoost: 1000000
-  Boost: {fileID: 1126242806587042, guid: 095bf70e1adee49b9a9a1ff354b8edc0, type: 2}
-  boostMultiplier: 5
+  shadowStepBoost: 20
+  Boost: {fileID: 1095685678186644, guid: 527147536c0624ab7b9f17a04b19f4be, type: 2}
+  boostMultiplier: 20
   boostDuration: 20
-  HealthKit: {fileID: 0}
-  Armor: {fileID: 0}
-  armorDuration: 0
-  SwiftyShoes: {fileID: 0}
-  SwiftyShoesDuration: 0
+  HealthKit: {fileID: 1858954927280402, guid: db9666d191016459aa63a60c3fc94049, type: 2}
+  Armor: {fileID: 1691626396580938, guid: 526ed1de9e41940cfb643e63c731a983, type: 2}
+  armorDuration: 10
+  SwiftyShoes: {fileID: 1912418391395012, guid: 90a4c6034040845db86a6fcd4d970ff1,
+    type: 2}
+  SwiftyShoesDuration: 15
 --- !u!222 &222901342826555740
 CanvasRenderer:
   m_ObjectHideFlags: 1

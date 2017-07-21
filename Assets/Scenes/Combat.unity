@@ -4603,7 +4603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 1748299300591200, guid: bd4dceaf77e6f4b5a88ff687bb20ff87, type: 2}
-  - {fileID: 1768225851094892, guid: aee4c0b4c53854aab8fb6e744891d53a, type: 2}
+  - {fileID: 1011761148683016, guid: 6718de0afee8b4f56bc43741b00e13b5, type: 2}
   - {fileID: 1768225851094892, guid: ec398a21cd2a14d3e81a1f56294241cd, type: 2}
 --- !u!4 &900859468
 Transform:
